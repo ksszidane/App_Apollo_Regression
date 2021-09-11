@@ -1,6 +1,7 @@
-package SDK_001_실행;
+package SDK_001_AudioPlayer_Interface;
 
 import java.lang.reflect.Method;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
@@ -11,7 +12,7 @@ import SDK_000_xPath.xPath;
 import TestNG_Set.SDK_TestCase;
 import junit.framework.Assert;
 
-public class 앱시작_01 extends SDK_TestCase {
+public class AudioPlayer_Interface extends SDK_TestCase {
 	
 	String authToken;
 	
@@ -35,17 +36,24 @@ public class 앱시작_01 extends SDK_TestCase {
 		
 	}
 	
-	@Test(description = "SDK 리그레이션 TC : 실행_0000")
-	public void TC_0000_앱실행(Method method) throws Exception {
+	@Test(description = "SDK 리그레이션 TC : AudioPlayer_Interface_01-01-01")
+	public void TC_01_01_01_AudioState_IDLE에서_PLAYING_전환확인(Method method) throws Exception {
 
+		test.log(Status.INFO, "01_01_01_Audio State IDLE에서 PLAYING 전환 확인");
+		System.out.println("01_01_01_Audio State IDLE에서 PLAYING 전환 확인");
+		
 		test.log(Status.INFO, "AppActivity으로 화면 확인");
 	    util.switchContext("NATIVE_APP");
 	    
 	    test.log(Status.INFO, "앱 실행 후 authToken 얻기 함수 실행");
 	    authToken얻기();
 	    
-	    test.log(Status.INFO, "테스트용 몇시야 발화"); 
-	    util.sendPost("몇시야", uID, SampleApp_did, ServerName, Place, authToken);
+	    test.log(Status.INFO, "[노래 들러줘] 발화"); 
+	    util.sendPost("노래 들러줘", uID, SampleApp_did, ServerName, Place, authToken);
+	    
+	    test.log(Status.INFO, "directive_info 값 확인"); 
+	    String actn = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    System.out.println(actn);
 	    
 	    
 	    

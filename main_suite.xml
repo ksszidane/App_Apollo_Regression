@@ -25,11 +25,10 @@
 		
 		<classes>
 			<!--
-			<class name="Chips_001_기본기능.기본기능_01_서비스호출" />
-			<class name="Chips_001_기본기능.기본기능_02_홈화면최초진입" />
+			
 			-->
 		
-			<class name="SDK_001_실행.앱시작_01" />
+			<class name="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface" />
 			
 		
 		
