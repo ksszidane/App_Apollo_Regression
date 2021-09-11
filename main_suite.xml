@@ -8,7 +8,7 @@
 		<parameter name="OS" value="Android" />
 		<parameter name="AppName" value="SDK" />
 		<parameter name="Server" value="PRD" /> <!-- 서버값 대문자로  : PRD, STG -->
-		<parameter name="TestPlace" value="out" /> <!-- 사내 : in  // 사외 : out-->
+		<parameter name="TestPlace" value="in" /> <!-- 사내 : in  // 사외 : out-->
 		<parameter name="deviceID_SampleApp" value="ALDFR7K5QIZLF9F3FBA3"/>
 		<parameter name="userID" value="ALDF3NYA6C0D0C654DD2"/>
 		<parameter name="Auth_Token_SampleApp" value="38C034E5E79341D096E6CCB8AD0FBE2E"/> 

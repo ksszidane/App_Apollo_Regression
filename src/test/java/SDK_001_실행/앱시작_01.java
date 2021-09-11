@@ -18,7 +18,7 @@ public class 앱시작_01 extends SDK_TestCase {
 	public void authToken얻기() throws Exception {
 		
 		test.log(Status.INFO, "Main 화면 CommandText에 [노래 들려줘] 입력하기 ");
-		util.type(By.xpath(xPath.텍스트커맨드입력), "노래 들려줘");
+		util.type(By.xpath(xPath.텍스트커맨드입력), "벅스에서 노래 들려줘");
 		
 		test.log(Status.INFO, "입력한 CommandText 실행");
 		util.click(By.xpath(xPath.메인화면_커맨드입력_Enter));
