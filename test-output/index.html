@@ -24,23 +24,23 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 8 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-ExtentReport">
-              <span class="suite-name border-passed">ExtentReport</span>
+            <a href="#" panel-name="suite-ExtentReport" class="navigator-link">
+              <span class="suite-name border-failed">ExtentReport</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-ExtentReport">
-                    <span>C:\Users\SKTelecom\git\App_SDK_Regression\main_suite.xml</span>
+                  <a href="#" panel-name="test-xml-ExtentReport" class="navigator-link ">
+                    <span>C:\Users\kei\git\App_SDK_Regression\main_suite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-ExtentReport">
+                  <a href="#" panel-name="testlist-ExtentReport" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-ExtentReport">
+                  <a href="#" panel-name="group-ExtentReport" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-ExtentReport">
+                  <a href="#" panel-name="times-ExtentReport" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-ExtentReport">
+                  <a href="#" panel-name="reporter-ExtentReport" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-ExtentReport">
+                  <a href="#" panel-name="ignored-methods-ExtentReport" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-ExtentReport">
+                  <a href="#" panel-name="chronological-ExtentReport" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -93,7 +93,56 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">23 methods, 8 failed,   15 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-ExtentReport" class="hide-methods failed suite-ExtentReport"> (hide)</a> <!-- hide-methods failed suite-ExtentReport -->
+                      <a href="#" panel-name="suite-ExtentReport" class="show-methods failed suite-ExtentReport"> (show)</a> <!-- show-methods failed suite-ExtentReport -->
+                    </span>
+                    <div class="method-list-content failed suite-ExtentReport">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_50_AudioPlayerTemplate1의_titletext_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_50...)">TC_01_01_50_AudioPlayerTemplate1의_titletext_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_50...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_51_AudioPlayerTemplate1의_contenttitle_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_51...)">TC_01_01_51_AudioPlayerTemplate1의_contenttitle_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_51...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_52_AudioPlayerTemplate1의_contensubtitle1_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_52...)">TC_01_01_52_AudioPlayerTemplate1의_contensubtitle1_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_52...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_53_AudioPlayerTemplate1의_contensubtitle2_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_53...)">TC_01_01_53_AudioPlayerTemplate1의_contensubtitle2_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_53...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_54_AudioPlayerTemplate1의_contentimageUrl_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_54...)">TC_01_01_54_AudioPlayerTemplate1의_contentimageUrl_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_54...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_55_AudioPlayerTemplate1의_contentdurationSec_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_55...)">TC_01_01_55_AudioPlayerTemplate1의_contentdurationSec_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_55...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_57_AudioPlayerTemplate1의_contentbadgeImageUrl_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_57...)">TC_01_01_57_AudioPlayerTemplate1의_contentbadgeImageUrl_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_57...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_67...)">TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_67...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-ExtentReport -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,8 +152,78 @@
                     </span>
                     <div class="method-list-content passed suite-ExtentReport">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface" hash-for-method="TC_01_01_01_AudioState_IDLE에서_PLAYING_전환확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface.TC_01_01_01_AudioState_IDLE에서_PLAYIN...)">TC_01_01_01_AudioState_IDLE에서_PLAYING_전환확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface.TC_01_01_01_AudioState_IDLE에서_PLAYIN...)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_00_00_00_SampleApp_Start(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_00_00_00...)">TC_00_00_00_SampleApp_Start(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_00_00_00...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_59_AudioPlayerTemplate1의_contentlyricstitle_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_59...)">TC_01_01_59_AudioPlayerTemplate1의_contentlyricstitle_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_59...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_60_01_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)">TC_01_01_60_01_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_60_02_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)">TC_01_01_60_02_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_60_03_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)">TC_01_01_60_03_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_61_01_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...)">TC_01_01_61_01_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_61_02_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...)">TC_01_01_61_02_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_62_01_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...)">TC_01_01_62_01_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_62_02_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...)">TC_01_01_62_02_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_63_AudioPlayerTemplate1의_contentlyricslyricsInfoListtext_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_63...)">TC_01_01_63_AudioPlayerTemplate1의_contentlyricslyricsInfoListtext_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_63...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_64_AudioPlayerTemplate1의_contentlyricslyricsInfoListshowButton_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_64...)">TC_01_01_64_AudioPlayerTemplate1의_contentlyricslyricsInfoListshowButton_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_64...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_65_좋아요미지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_65...)">TC_01_01_65_좋아요미지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_65...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_66_좋아요지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_66...)">TC_01_01_66_좋아요지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_66...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_68_Play_AudioPlayerTemplate1의_settingsrepeat_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_68...)">TC_01_01_68_Play_AudioPlayerTemplate1의_settingsrepeat_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_68...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1" class="method navigator-link" hash-for-method="TC_01_01_69_Play_AudioPlayerTemplate1의_settingsshuffle_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_69...)">TC_01_01_69_Play_AudioPlayerTemplate1의_settingsshuffle_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_69...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ExtentReport -->
@@ -119,20 +238,342 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-ExtentReport" class="panel ExtentReport">
-          <div class="suite-ExtentReport-class-passed">
+          <div class="suite-ExtentReport-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">SDK_001_AudioPlayer_Interface.AudioPlayer_Interface</span>
+              <img src="failed.png"/>
+              <span class="class-name">SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_01_01_01_AudioState_IDLE에서_PLAYING_전환확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface.TC_01_01_01_AudioState_IDLE에서_PLAYIN...)">
-                  </a> <!-- TC_01_01_01_AudioState_IDLE에서_PLAYING_전환확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface.TC_01_01_01_AudioState_IDLE에서_PLAYIN...) -->
-                  <span class="method-name">TC_01_01_01_AudioState_IDLE에서_PLAYING_전환확인</span>
-                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface.TC_01_01_01_AudioState_IDLE에서_PLAYING_전환확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <a name="TC_01_01_50_AudioPlayerTemplate1의_titletext_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_50...)">
+                  </a> <!-- TC_01_01_50_AudioPlayerTemplate1의_titletext_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_50...) -->
+                  <span class="method-name">TC_01_01_50_AudioPlayerTemplate1의_titletext_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_50_AudioPlayerTemplate1의_titletext_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_50_AudioPlayerTemplate1의_titletext_확인(AudioPlayer_Interface_02_AudioPlayer_Template1.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-01)                  </em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-50)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_51_AudioPlayerTemplate1의_contenttitle_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_51...)">
+                  </a> <!-- TC_01_01_51_AudioPlayerTemplate1의_contenttitle_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_51...) -->
+                  <span class="method-name">TC_01_01_51_AudioPlayerTemplate1의_contenttitle_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_51_AudioPlayerTemplate1의_contenttitle_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_51_AudioPlayerTemplate1의_contenttitle_확인(AudioPlayer_Interface_02_AudioPlayer_Template1.java:115)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-51)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_52_AudioPlayerTemplate1의_contensubtitle1_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_52...)">
+                  </a> <!-- TC_01_01_52_AudioPlayerTemplate1의_contensubtitle1_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_52...) -->
+                  <span class="method-name">TC_01_01_52_AudioPlayerTemplate1의_contensubtitle1_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_52_AudioPlayerTemplate1의_contensubtitle1_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_52_AudioPlayerTemplate1의_contensubtitle1_확인(AudioPlayer_Interface_02_AudioPlayer_Template1.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-52)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_53_AudioPlayerTemplate1의_contensubtitle2_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_53...)">
+                  </a> <!-- TC_01_01_53_AudioPlayerTemplate1의_contensubtitle2_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_53...) -->
+                  <span class="method-name">TC_01_01_53_AudioPlayerTemplate1의_contensubtitle2_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_53_AudioPlayerTemplate1의_contensubtitle2_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_53_AudioPlayerTemplate1의_contensubtitle2_확인(AudioPlayer_Interface_02_AudioPlayer_Template1.java:153)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-53)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_54_AudioPlayerTemplate1의_contentimageUrl_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_54...)">
+                  </a> <!-- TC_01_01_54_AudioPlayerTemplate1의_contentimageUrl_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_54...) -->
+                  <span class="method-name">TC_01_01_54_AudioPlayerTemplate1의_contentimageUrl_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_54_AudioPlayerTemplate1의_contentimageUrl_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_54_AudioPlayerTemplate1의_contentimageUrl_확인(AudioPlayer_Interface_02_AudioPlayer_Template1.java:172)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-54)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_55_AudioPlayerTemplate1의_contentdurationSec_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_55...)">
+                  </a> <!-- TC_01_01_55_AudioPlayerTemplate1의_contentdurationSec_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_55...) -->
+                  <span class="method-name">TC_01_01_55_AudioPlayerTemplate1의_contentdurationSec_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_55_AudioPlayerTemplate1의_contentdurationSec_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_55_AudioPlayerTemplate1의_contentdurationSec_확인(AudioPlayer_Interface_02_AudioPlayer_Template1.java:191)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-55)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_57_AudioPlayerTemplate1의_contentbadgeImageUrl_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_57...)">
+                  </a> <!-- TC_01_01_57_AudioPlayerTemplate1의_contentbadgeImageUrl_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_57...) -->
+                  <span class="method-name">TC_01_01_57_AudioPlayerTemplate1의_contentbadgeImageUrl_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_57_AudioPlayerTemplate1의_contentbadgeImageUrl_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_57_AudioPlayerTemplate1의_contentbadgeImageUrl_확인(AudioPlayer_Interface_02_AudioPlayer_Template1.java:222)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-57)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_67...)">
+                  </a> <!-- TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_67...) -->
+                  <span class="method-name">TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인(AudioPlayer_Interface_02_AudioPlayer_Template1.java:652)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-67)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ExtentReport-class-failed -->
+          <div class="suite-ExtentReport-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_00_00_00_SampleApp_Start(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_00_00_00...)">
+                  </a> <!-- TC_00_00_00_SampleApp_Start(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_00_00_00...) -->
+                  <span class="method-name">TC_00_00_00_SampleApp_Start</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_00_00_00_SampleApp_Start(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_59_AudioPlayerTemplate1의_contentlyricstitle_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_59...)">
+                  </a> <!-- TC_01_01_59_AudioPlayerTemplate1의_contentlyricstitle_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_59...) -->
+                  <span class="method-name">TC_01_01_59_AudioPlayerTemplate1의_contentlyricstitle_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_59_AudioPlayerTemplate1의_contentlyricstitle_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-59)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_60_01_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)">
+                  </a> <!-- TC_01_01_60_01_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...) -->
+                  <span class="method-name">TC_01_01_60_01_AudioPlayerTemplate1의_contentlyricslyricsType_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60_01_AudioPlayerTemplate1의_contentlyricslyricsType_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-60)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_60_02_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)">
+                  </a> <!-- TC_01_01_60_02_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...) -->
+                  <span class="method-name">TC_01_01_60_02_AudioPlayerTemplate1의_contentlyricslyricsType_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60_02_AudioPlayerTemplate1의_contentlyricslyricsType_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-60)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_60_03_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)">
+                  </a> <!-- TC_01_01_60_03_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...) -->
+                  <span class="method-name">TC_01_01_60_03_AudioPlayerTemplate1의_contentlyricslyricsType_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60_03_AudioPlayerTemplate1의_contentlyricslyricsType_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-60)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_61_01_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...)">
+                  </a> <!-- TC_01_01_61_01_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...) -->
+                  <span class="method-name">TC_01_01_61_01_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61_01_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-61)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_61_02_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...)">
+                  </a> <!-- TC_01_01_61_02_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...) -->
+                  <span class="method-name">TC_01_01_61_02_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61_02_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-61)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_62_01_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...)">
+                  </a> <!-- TC_01_01_62_01_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...) -->
+                  <span class="method-name">TC_01_01_62_01_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62_01_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-62)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_62_02_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...)">
+                  </a> <!-- TC_01_01_62_02_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...) -->
+                  <span class="method-name">TC_01_01_62_02_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62_02_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-62)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_63_AudioPlayerTemplate1의_contentlyricslyricsInfoListtext_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_63...)">
+                  </a> <!-- TC_01_01_63_AudioPlayerTemplate1의_contentlyricslyricsInfoListtext_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_63...) -->
+                  <span class="method-name">TC_01_01_63_AudioPlayerTemplate1의_contentlyricslyricsInfoListtext_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_63_AudioPlayerTemplate1의_contentlyricslyricsInfoListtext_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-63)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_64_AudioPlayerTemplate1의_contentlyricslyricsInfoListshowButton_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_64...)">
+                  </a> <!-- TC_01_01_64_AudioPlayerTemplate1의_contentlyricslyricsInfoListshowButton_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_64...) -->
+                  <span class="method-name">TC_01_01_64_AudioPlayerTemplate1의_contentlyricslyricsInfoListshowButton_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_64_AudioPlayerTemplate1의_contentlyricslyricsInfoListshowButton_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-64)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_65_좋아요미지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_65...)">
+                  </a> <!-- TC_01_01_65_좋아요미지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_65...) -->
+                  <span class="method-name">TC_01_01_65_좋아요미지원Play_AudioPlayerTemplate1의_settingsfavorite_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_65_좋아요미지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-65)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_66_좋아요지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_66...)">
+                  </a> <!-- TC_01_01_66_좋아요지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_66...) -->
+                  <span class="method-name">TC_01_01_66_좋아요지원Play_AudioPlayerTemplate1의_settingsfavorite_확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_66_좋아요지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-66)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_68_Play_AudioPlayerTemplate1의_settingsrepeat_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_68...)">
+                  </a> <!-- TC_01_01_68_Play_AudioPlayerTemplate1의_settingsrepeat_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_68...) -->
+                  <span class="method-name">TC_01_01_68_Play_AudioPlayerTemplate1의_settingsrepeat_변동값확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_68_Play_AudioPlayerTemplate1의_settingsrepeat_변동값확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-68)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_01_69_Play_AudioPlayerTemplate1의_settingsshuffle_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_69...)">
+                  </a> <!-- TC_01_01_69_Play_AudioPlayerTemplate1의_settingsshuffle_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_69...) -->
+                  <span class="method-name">TC_01_01_69_Play_AudioPlayerTemplate1의_settingsshuffle_변동값확인</span>
+                  <span class="parameters">(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_69_Play_AudioPlayerTemplate1의_settingsshuffle_변동값확인(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(SDK 리그레이션 TC : AudioPlayer_Interface_01-01-68)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -140,26 +581,26 @@
         </div> <!-- panel ExtentReport -->
         <div panel-name="test-xml-ExtentReport" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\SKTelecom\git\App_SDK_Regression\main_suite.xml</span>
+            <span class="header-content">C:\Users\kei\git\App_SDK_Regression\main_suite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;10&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;ExtentReport&quot; parallel=&quot;tests&quot;&gt;
+&lt;suite thread-count=&quot;10&quot; parallel=&quot;tests&quot; name=&quot;ExtentReport&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;Project&quot; value=&quot;SDK&quot;/&gt;
   &lt;parameter name=&quot;hubAddress&quot; value=&quot;http://0.0.0.0:4723/wd/hub&quot;/&gt;
-  &lt;test thread-count=&quot;10&quot; name=&quot;Test_Project&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;10&quot; parallel=&quot;tests&quot; name=&quot;Test_Project&quot;&gt;
     &lt;parameter name=&quot;MobileDevice&quot; value=&quot;R33M4000CY&quot;/&gt;
     &lt;parameter name=&quot;OS&quot; value=&quot;Android&quot;/&gt;
     &lt;parameter name=&quot;Server&quot; value=&quot;PRD&quot;/&gt;
-    &lt;parameter name=&quot;TestPlace&quot; value=&quot;in&quot;/&gt;
+    &lt;parameter name=&quot;TestPlace&quot; value=&quot;out&quot;/&gt;
     &lt;parameter name=&quot;deviceID_SampleApp&quot; value=&quot;ALDFR7K5QIZLF9F3FBA3&quot;/&gt;
     &lt;parameter name=&quot;userID&quot; value=&quot;ALDF3NYA6C0D0C654DD2&quot;/&gt;
     &lt;parameter name=&quot;AppName&quot; value=&quot;SDK&quot;/&gt;
     &lt;parameter name=&quot;Auth_Token_SampleApp&quot; value=&quot;38C034E5E79341D096E6CCB8AD0FBE2E&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;SDK_001_AudioPlayer_Interface.AudioPlayer_Interface&quot;/&gt;
+      &lt;class name=&quot;SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test_Project --&gt;
 &lt;/suite&gt; &lt;!-- ExtentReport --&gt;
@@ -199,16 +640,104 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(23);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_01_01_01_AudioState_IDLE에서_PLAYING_전환확인')
-data.setCell(0, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface')
-data.setCell(0, 3, 55705);
+data.setCell(0, 1, 'TC_01_01_66_좋아요지원Play_AudioPlayerTemplate1의_settingsfavorite_확인')
+data.setCell(0, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(0, 3, 116476);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TC_01_01_69_Play_AudioPlayerTemplate1의_settingsshuffle_변동값확인')
+data.setCell(1, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(1, 3, 75495);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TC_01_01_64_AudioPlayerTemplate1의_contentlyricslyricsInfoListshowButton_확인')
+data.setCell(2, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(2, 3, 62999);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TC_01_01_68_Play_AudioPlayerTemplate1의_settingsrepeat_변동값확인')
+data.setCell(3, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(3, 3, 61047);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'TC_01_01_65_좋아요미지원Play_AudioPlayerTemplate1의_settingsfavorite_확인')
+data.setCell(4, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(4, 3, 55708);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'TC_01_01_60_03_AudioPlayerTemplate1의_contentlyricslyricsType_확인')
+data.setCell(5, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(5, 3, 55001);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'TC_01_01_59_AudioPlayerTemplate1의_contentlyricstitle_확인')
+data.setCell(6, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(6, 3, 47548);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'TC_01_01_62_02_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인')
+data.setCell(7, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(7, 3, 46235);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'TC_01_01_62_01_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인')
+data.setCell(8, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(8, 3, 45751);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'TC_01_01_60_02_AudioPlayerTemplate1의_contentlyricslyricsType_확인')
+data.setCell(9, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(9, 3, 45726);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'TC_01_01_61_01_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인')
+data.setCell(10, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(10, 3, 45503);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'TC_01_01_61_02_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인')
+data.setCell(11, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(11, 3, 45260);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'TC_00_00_00_SampleApp_Start')
+data.setCell(12, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(12, 3, 35192);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'TC_01_01_57_AudioPlayerTemplate1의_contentbadgeImageUrl_확인')
+data.setCell(13, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(13, 3, 30115);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인')
+data.setCell(14, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(14, 3, 28943);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'TC_01_01_51_AudioPlayerTemplate1의_contenttitle_확인')
+data.setCell(15, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(15, 3, 13836);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'TC_01_01_50_AudioPlayerTemplate1의_titletext_확인')
+data.setCell(16, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(16, 3, 13760);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'TC_01_01_52_AudioPlayerTemplate1의_contensubtitle1_확인')
+data.setCell(17, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(17, 3, 13742);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'TC_01_01_53_AudioPlayerTemplate1의_contensubtitle2_확인')
+data.setCell(18, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(18, 3, 13707);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'TC_01_01_54_AudioPlayerTemplate1의_contentimageUrl_확인')
+data.setCell(19, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(19, 3, 13658);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'TC_01_01_63_AudioPlayerTemplate1의_contentlyricslyricsInfoListtext_확인')
+data.setCell(20, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(20, 3, 13649);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'TC_01_01_55_AudioPlayerTemplate1의_contentdurationSec_확인')
+data.setCell(21, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(21, 3, 13642);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'TC_01_01_60_01_AudioPlayerTemplate1의_contentlyricslyricsType_확인')
+data.setCell(22, 2, 'SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1')
+data.setCell(22, 3, 13634);
 window.suiteTableData['ExtentReport']= { tableData: data, tableDiv: 'times-div-ExtentReport'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 15 minutes</span>
               <div id="times-div-ExtentReport">
               </div> <!-- times-div-ExtentReport -->
             </div> <!-- times-div -->
@@ -234,26 +763,306 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">SDK_001_AudioPlayer_Interface.AudioPlayer_Interface</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setupClass(Android, SDK, http://0.0.0.0:4723/wd/hub, PRD, SDK, in, R33M4000CY, ALDF3NYA6C0D0C654DD2, ALDFR7K5QI...)</span>
+                <span class="method-name">setupClass(Android, SDK, http://0.0.0.0:4723/wd/hub, PRD, SDK, out, R33M4000CY, ALDF3NYA6C0D0C654DD2, ALDFR7K5Q...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface.TC_01_01_01_AudioState_IDLE에서_PLAYIN...)</span>
-                <span class="method-start">20329 ms</span>
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_00_00_00...)</span>
+                <span class="method-start">12463 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC_01_01_01_AudioState_IDLE에서_PLAYING_전환확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface.TC_01_01_01_AudioState_IDLE에서_PLAYIN...)</span>
-                <span class="method-start">20392 ms</span>
+                <span class="method-name">TC_00_00_00_SampleApp_Start(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_00_00_00...)</span>
+                <span class="method-start">12471 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">AfterMethod([TestResult name=TC_01_01_01_AudioState_IDLE에서_PLAYING_전환확인 status=SUCCESS method=AudioPlayer_Interf...)</span>
-                <span class="method-start">76101 ms</span>
+                <span class="method-name">AfterMethod([TestResult name=TC_00_00_00_SampleApp_Start status=SUCCESS method=AudioPlayer_Interface_02_AudioPla...)</span>
+                <span class="method-start">47666 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_50...)</span>
+                <span class="method-start">47667 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_01_01_50_AudioPlayerTemplate1의_titletext_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_50...)</span>
+                <span class="method-start">47668 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_50_AudioPlayerTemplate1의_titletext_확인 status=FAILURE method=AudioPlayer_In...)</span>
+                <span class="method-start">61435 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_51...)</span>
+                <span class="method-start">61848 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_01_01_51_AudioPlayerTemplate1의_contenttitle_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_51...)</span>
+                <span class="method-start">61849 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_51_AudioPlayerTemplate1의_contenttitle_확인 status=FAILURE method=AudioPlayer...)</span>
+                <span class="method-start">75687 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_52...)</span>
+                <span class="method-start">76084 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_01_01_52_AudioPlayerTemplate1의_contensubtitle1_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_52...)</span>
+                <span class="method-start">76084 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_52_AudioPlayerTemplate1의_contensubtitle1_확인 status=FAILURE method=AudioPla...)</span>
+                <span class="method-start">89828 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_53...)</span>
+                <span class="method-start">90186 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_01_01_53_AudioPlayerTemplate1의_contensubtitle2_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_53...)</span>
+                <span class="method-start">90186 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_53_AudioPlayerTemplate1의_contensubtitle2_확인 status=FAILURE method=AudioPla...)</span>
+                <span class="method-start">103895 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_01_01_54_AudioPlayerTemplate1의_contentimageUrl_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_54...)</span>
+                <span class="method-start">104272 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_54...)</span>
+                <span class="method-start">104272 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_54_AudioPlayerTemplate1의_contentimageUrl_확인 status=FAILURE method=AudioPla...)</span>
+                <span class="method-start">117934 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_55...)</span>
+                <span class="method-start">118315 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_01_01_55_AudioPlayerTemplate1의_contentdurationSec_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_55...)</span>
+                <span class="method-start">118315 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_55_AudioPlayerTemplate1의_contentdurationSec_확인 status=FAILURE method=Audio...)</span>
+                <span class="method-start">131959 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_57...)</span>
+                <span class="method-start">132342 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_01_01_57_AudioPlayerTemplate1의_contentbadgeImageUrl_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_57...)</span>
+                <span class="method-start">132342 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_57_AudioPlayerTemplate1의_contentbadgeImageUrl_확인 status=FAILURE method=Aud...)</span>
+                <span class="method-start">162458 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_59_AudioPlayerTemplate1의_contentlyricstitle_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_59...)</span>
+                <span class="method-start">162879 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_59...)</span>
+                <span class="method-start">162879 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_59_AudioPlayerTemplate1의_contentlyricstitle_확인 status=SUCCESS method=Audio...)</span>
+                <span class="method-start">210433 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)</span>
+                <span class="method-start">210434 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_60_01_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)</span>
+                <span class="method-start">210434 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_60_01_AudioPlayerTemplate1의_contentlyricslyricsType_확인 status=SUCCESS meth...)</span>
+                <span class="method-start">224069 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)</span>
+                <span class="method-start">224070 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_60_02_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)</span>
+                <span class="method-start">224070 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_60_02_AudioPlayerTemplate1의_contentlyricslyricsType_확인 status=SUCCESS meth...)</span>
+                <span class="method-start">269798 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)</span>
+                <span class="method-start">269800 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_60_03_AudioPlayerTemplate1의_contentlyricslyricsType_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_60...)</span>
+                <span class="method-start">269800 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_60_03_AudioPlayerTemplate1의_contentlyricslyricsType_확인 status=SUCCESS meth...)</span>
+                <span class="method-start">324801 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...)</span>
+                <span class="method-start">324802 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_61_01_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...)</span>
+                <span class="method-start">324802 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_61_01_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인 status=SUCCESS ...)</span>
+                <span class="method-start">370307 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_61_02_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...)</span>
+                <span class="method-start">370308 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_61...)</span>
+                <span class="method-start">370308 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_61_02_AudioPlayerTemplate1의_contentlyricslyricsInfoList_확인 status=SUCCESS ...)</span>
+                <span class="method-start">415569 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...)</span>
+                <span class="method-start">415570 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_62_01_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...)</span>
+                <span class="method-start">415570 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...)</span>
+                <span class="method-start">461322 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_62_01_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인 status=SUCC...)</span>
+                <span class="method-start">461322 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_62_02_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_62...)</span>
+                <span class="method-start">461323 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_62_02_AudioPlayerTemplate1의_contentlyricslyricsInfoListtime_확인 status=SUCC...)</span>
+                <span class="method-start">507558 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_63...)</span>
+                <span class="method-start">507559 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_63_AudioPlayerTemplate1의_contentlyricslyricsInfoListtext_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_63...)</span>
+                <span class="method-start">507560 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_64...)</span>
+                <span class="method-start">521211 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_64_AudioPlayerTemplate1의_contentlyricslyricsInfoListshowButton_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_64...)</span>
+                <span class="method-start">521211 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_63_AudioPlayerTemplate1의_contentlyricslyricsInfoListtext_확인 status=SUCCESS...)</span>
+                <span class="method-start">521211 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_64_AudioPlayerTemplate1의_contentlyricslyricsInfoListshowButton_확인 status=S...)</span>
+                <span class="method-start">584210 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_65_좋아요미지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_65...)</span>
+                <span class="method-start">584211 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_65...)</span>
+                <span class="method-start">584211 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_65_좋아요미지원Play_AudioPlayerTemplate1의_settingsfavorite_확인 status=SUCCESS met...)</span>
+                <span class="method-start">639920 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_66...)</span>
+                <span class="method-start">639921 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_66_좋아요지원Play_AudioPlayerTemplate1의_settingsfavorite_확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_66...)</span>
+                <span class="method-start">639924 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_66_좋아요지원Play_AudioPlayerTemplate1의_settingsfavorite_확인 status=SUCCESS meth...)</span>
+                <span class="method-start">756401 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_67...)</span>
+                <span class="method-start">756402 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_67...)</span>
+                <span class="method-start">756402 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인 status=FAILURE method...)</span>
+                <span class="method-start">785346 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_68_Play_AudioPlayerTemplate1의_settingsrepeat_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_68...)</span>
+                <span class="method-start">786075 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_68...)</span>
+                <span class="method-start">786075 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_68_Play_AudioPlayerTemplate1의_settingsrepeat_변동값확인 status=SUCCESS method=A...)</span>
+                <span class="method-start">847126 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_69...)</span>
+                <span class="method-start">847127 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_01_69_Play_AudioPlayerTemplate1의_settingsshuffle_변동값확인(public void SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1.TC_01_01_69...)</span>
+                <span class="method-start">847128 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_01_01_69_Play_AudioPlayerTemplate1의_settingsshuffle_변동값확인 status=SUCCESS method=...)</span>
+                <span class="method-start">922624 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
-                <span class="method-name">tearDownClass(PRD, SDK, in, R33M4000CY, ALDF3NYA6C0D0C654DD2, ALDFR7K5QIZLF9F3FBA3)</span>
-                <span class="method-start">76113 ms</span>
+                <span class="method-name">tearDownClass(PRD, SDK, out, R33M4000CY, ALDF3NYA6C0D0C654DD2, ALDFR7K5QIZLF9F3FBA3)</span>
+                <span class="method-start">922626 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

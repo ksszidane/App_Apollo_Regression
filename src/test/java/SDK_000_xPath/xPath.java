@@ -15,7 +15,7 @@ public class xPath {
 	
 	public static String 메인화면_커맨드입력 = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.widget.ScrollView/android.widget.EditText";
 	public static String 메인화면_커맨드입력_Enter = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.widget.ScrollView/android.widget.EditText/android.view.View[1]";
-
+	
 	
 
 }
