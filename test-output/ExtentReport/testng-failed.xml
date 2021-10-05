@@ -16,17 +16,10 @@
       <class name="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1">
         <methods>
           <include name="TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인" invocation-numbers="0"/>
-          <include name="TC_01_01_55_AudioPlayerTemplate1의_contentdurationSec_확인" invocation-numbers="0"/>
           <include name="tearDownClass"/>
-          <include name="TC_01_01_53_AudioPlayerTemplate1의_contensubtitle2_확인" invocation-numbers="0"/>
-          <include name="TC_01_01_50_AudioPlayerTemplate1의_titletext_확인" invocation-numbers="0"/>
           <include name="setupClass"/>
           <include name="BeforeMethod"/>
-          <include name="TC_01_01_57_AudioPlayerTemplate1의_contentbadgeImageUrl_확인" invocation-numbers="0"/>
           <include name="AfterMethod"/>
-          <include name="TC_01_01_51_AudioPlayerTemplate1의_contenttitle_확인" invocation-numbers="0"/>
-          <include name="TC_01_01_54_AudioPlayerTemplate1의_contentimageUrl_확인" invocation-numbers="0"/>
-          <include name="TC_01_01_52_AudioPlayerTemplate1의_contensubtitle1_확인" invocation-numbers="0"/>
         </methods>
       </class> <!-- SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1 -->
     </classes>
