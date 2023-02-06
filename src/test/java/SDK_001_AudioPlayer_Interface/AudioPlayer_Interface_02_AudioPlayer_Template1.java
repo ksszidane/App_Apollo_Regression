@@ -25,7 +25,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 		util.click(By.xpath(xPath.메인화면_커맨드입력_Enter));
 		
 		test.log(Status.INFO, "acceesToken 얻기"); 
-	    String actn = util.authToken_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String actn = util.authToken_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    
 	    test.log(Status.INFO, "authToken : " + actn); 
 	    System.out.println(actn);
@@ -72,7 +72,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "directive값에 \"iconUrl\":https://cdn.sktnugu.com/aladdin/image/play/melon/melon_logo_60_line.png 확인"); 
-	    String directive1 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive1 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive1.contains("\"iconUrl\":\"https://cdn.sktnugu.com/aladdin/image/play/melon/melon_logo_60_line.png"));
 	    
 	    test.log(Status.INFO, "player 상단 도메인 이미지 노출 확인"); 
@@ -92,7 +92,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10661");
 		
 	    test.log(Status.INFO, "directive값에 \"text\":Melon"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"text\":\"Melon"));
 	    
 	    test.log(Status.INFO, "player 상단 도메인 타이틀 노출 확인"); 
@@ -111,7 +111,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10662");
 		
 	    test.log(Status.INFO, "directive값에 \"title\":나비"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"title\":\"나비"));
 	    
 	    test.log(Status.INFO, "player 음원 타이틀 노출 확인"); 
@@ -130,7 +130,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10664");
 		
 	    test.log(Status.INFO, "directive값에 \"subtitle1\":자우림"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"subtitle1\":\"자우림"));
 	    
 	    test.log(Status.INFO, "player 음원 가수명 노출 확인"); 
@@ -149,7 +149,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10665");
 		
 	    test.log(Status.INFO, "directive값에 \"subtitle2\":정규작업"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"subtitle2\":\"B정규작업"));
 	    
 	    test.log(Status.INFO, "player 음원 앨범명 노출 확인"); 
@@ -168,7 +168,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10666");
 		
 	    test.log(Status.INFO, "directive값에 \"imageUrl\":https://cdnimg.melon.co.kr/cm/album/images/000/04/661/4661_500.jpg/melon/optimize/90"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"imageUrl\":\"https://cdnimg.melon.co.kr/cm/album/images/000/04/661/4661_500.jpg/melon/optimize/90"));
 	    
 	    test.log(Status.INFO, "player 음원 앨범 이미지 노출 확인"); 
@@ -187,7 +187,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10667");
 		
 	    test.log(Status.INFO, "directive값에 \"durationSec\":264"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"durationSec\":\"264"));
 	    
 	    test.log(Status.INFO, "player 음원 프로그레스바 노출 확인"); 
@@ -214,7 +214,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Thread.sleep(5000);
 		
 	    test.log(Status.INFO, "directive값에 \"badgeImageUrl\":https://cdn.sktnugu.com/aladdin/image/play/music/NU300/nu300_badge_19.png"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"badgeImageUrl\":\"https://cdn.sktnugu.com/aladdin/image/play/music/NU300/nu300_badge_19.png"));
 	    
 	    test.log(Status.INFO, "player 음원 19금 뱃지 노출 확인"); 
@@ -252,7 +252,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Assert.assertTrue(viewTitle.contains("나비 · 자우림"));
 	    
 	    test.log(Status.INFO, "directive값에 \"lyrics\":{\"title\":\"나비 · 자우림"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"lyrics\":{\"title\":\"나비 · 자우림"));
 
 	}
@@ -266,7 +266,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 		test.log(Status.INFO, "가사 동기화 음악 재생"); 
 		
 	    test.log(Status.INFO, "directive값에 \"lyricsType\":\"SYNC"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"lyricsType\":\"SYNC"));
 
 	}
@@ -297,7 +297,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    util.click(By.id("tv_show_lyrics"));
  
 	    test.log(Status.INFO, "directive값에 \"lyricsType\":\"NON_SYNC"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"lyricsType\":\"NON_SYNC"));
 
 	}
@@ -328,7 +328,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    util.sendPost("가사 보여줘", uID, SampleApp_did, ServerName, Place, authToken);
  
 	    test.log(Status.INFO, "directive값에 \"lyricsType\":\"NONE"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"lyricsType\":\"NONE"));
 
 	}
@@ -359,7 +359,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    util.click(By.id("tv_show_lyrics"));
  
 	    test.log(Status.INFO, "directive값에 lyricsInfoList 확인"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"lyricsInfoList\":"));
 
 	}
@@ -390,7 +390,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    util.click(By.id("cv_small_lyrics"));
  
 	    test.log(Status.INFO, "directive값에 lyricsInfoList 확인"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"lyricsInfoList\":"));
 
 	}
@@ -421,7 +421,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    util.click(By.id("tv_show_lyrics"));
  
 	    test.log(Status.INFO, "directive값에 lyricsInfoList.time 확인"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("{\"text\":\"아기 상어\"}"));
 
 	}
@@ -452,7 +452,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    util.click(By.id("cv_small_lyrics"));
  
 	    test.log(Status.INFO, "directive값에 lyricsInfoList.time 확인"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"time\":1,\"text\":\"나비 - 자우림"));
 
 	}
@@ -467,7 +467,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10679");
  
 	    test.log(Status.INFO, "directive값에 lyricsInfoList.text 확인"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"time\":1,\"text\":\"나비 - 자우림"));
 
 	}
@@ -536,7 +536,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Assert.assertFalse(iv_favorite);
 	    
 	    test.log(Status.INFO, "directive값에 \"settings\":{\"favorite 미노출 확인"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertFalse(directive2.contains("\"settings\":{\"favorite"));
 	    
 	    test.log(Status.INFO, "[누구 DJ 들려줘] 발화"); 
@@ -548,7 +548,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Assert.assertFalse(iv_favorite2);
 	    
 	    test.log(Status.INFO, "directive값에 \"settings\":{\"favorite 미노출 확인"); 
-	    String directive1 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive1 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertFalse(directive1.contains("\"settings\":{\"favorite"));
 		
 
@@ -576,7 +576,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Assert.assertTrue(iv_favorite);
 	    
 	    test.log(Status.INFO, "directive값에 \"settings\":{\"favorite 노출 확인"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"settings\":{\"favorite"));
 	    
 	    test.log(Status.INFO, "[오디오북 들려줘] 발화"); 
@@ -592,7 +592,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Assert.assertTrue(iv_favorite2);
 	    
 	    test.log(Status.INFO, "directive값에 \"settings\":{\"favorite 노출 확인"); 
-	    String directive1 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive1 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive1.contains("\"settings\":{\"favorite"));
 
 	    test.log(Status.INFO, "[팟캐스트 들려줘] 발화"); 
@@ -608,7 +608,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Assert.assertTrue(iv_favorite3);
 	    
 	    test.log(Status.INFO, "directive값에 \"settings\":{\"favorite 노출 확인"); 
-	    String directive3 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive3 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive3.contains("\"settings\":{\"favorite"));
 	    
 	    test.log(Status.INFO, "[라디오 들려줘] 발화"); 
@@ -624,7 +624,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Assert.assertTrue(iv_favorite4);
 	    
 	    test.log(Status.INFO, "directive값에 \"settings\":{\"favorite 노출 확인"); 
-	    String directive4 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive4 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive4.contains("\"settings\":{\"favorite"));
 		
 
@@ -648,7 +648,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "directive값에 \"favorite\":false 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"favorite\":false"));
 	    
 	    test.log(Status.INFO, "[노래 그만 ] 발화"); 
@@ -664,7 +664,7 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "directive값에 \"favorite\":true 확인"); 
-	    String directive1 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive1 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive1.contains("\"favorite\":true"));
 
 	}
@@ -690,21 +690,21 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    util.click(By.id("iv_repeat"));
 	    
 	    test.log(Status.INFO, "directive값에 \"repeat\\\":\"ONE\" 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"repeat\":\"ONE\""));
 	    
 	    test.log(Status.INFO, "[iv_repeat] 클릭"); 
 	    util.click(By.id("iv_repeat"));
 	    
 	    test.log(Status.INFO, "directive값에 \"repeat\":\"NONE\" 확인"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"repeat\":\"NONE\""));
 	    
 	    test.log(Status.INFO, "[iv_repeat] 클릭"); 
 	    util.click(By.id("iv_repeat"));
 	    
 	    test.log(Status.INFO, "directive값에 \"repeat\":\"ALL\" 확인"); 
-	    String directive3 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive3 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive3.contains("\"repeat\":\"ALL\""));
 	    
 
@@ -728,21 +728,21 @@ public class AudioPlayer_Interface_02_AudioPlayer_Template1 extends SDK_TestCase
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "directive값에 \"shuffle\":false 확인"); 
-	    String directive1 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive1 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive1.contains("\"shuffle\":false"));
 	    
 	    test.log(Status.INFO, "[셔플 해줘] 발화"); 
 	    util.sendPost("셔플 해줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "directive값에 \"shuffle\":true 확인"); 
-	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive2 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive2.contains("\"shuffle\":true"));
 	    
 	    test.log(Status.INFO, "[셔플 해제] 발화"); 
 	    util.sendPost("셔플 해제", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "directive값에 \"shuffle\":false 확인"); 
-	    String directive3 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive3 = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive3.contains("\"shuffle\":false"));
 	    
 

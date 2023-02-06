@@ -31,7 +31,7 @@
   	<dependency>
   		<groupId>com.github.ksszidane</groupId>
   		<artifactId>Appium-unit-lib</artifactId>
-  		<version>1.0.40</version>
+  		<version>1.0.45</version>
 	</dependency>
 	
 	<dependency>
@@ -47,7 +47,12 @@
   	</dependency>
 
 
-  
+
+	<dependency>
+		<groupId>android_ChipsApp</groupId>
+		<artifactId>android_ChipsApp</artifactId>
+		<version>1.0.0</version>
+	</dependency>
   </dependencies>
   
   <build>

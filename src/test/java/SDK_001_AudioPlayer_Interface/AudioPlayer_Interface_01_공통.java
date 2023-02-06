@@ -25,7 +25,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 		util.click(By.xpath(xPath.메인화면_커맨드입력_Enter));
 		
 		test.log(Status.INFO, "acceesToken 얻기"); 
-	    String actn = util.authToken_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String actn = util.authToken_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    
 	    test.log(Status.INFO, "authToken : " + actn); 
 	    System.out.println(actn);
@@ -63,7 +63,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("노래 들러줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.Play directive_info 값 확인"); 
-	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("AudioPlayer.Play"));
 	    
 	    test.log(Status.INFO, "bar_player 값 확인"); 
@@ -85,7 +85,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("일시정지", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.Pause directive_info 값 확인"); 
-	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("AudioPlayer.Pause"));
 	    
 	    test.log(Status.INFO, "bar_player 일시정지(재생)버튼 확인"); 
@@ -107,11 +107,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("이어서 들려줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.Play directive_info 값 확인"); 
-	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("AudioPlayer.Play"));
 	    
 	    test.log(Status.INFO, "audio_activity PLAYING 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PLAYING"));
 
 	}
@@ -129,11 +129,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("그만", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.Stop directive_info 값 확인"); 
-	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("AudioPlayer.Stop"));
 	    
 	    test.log(Status.INFO, "audio_activity STOPPED 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("STOPPED"));
 
 	}
@@ -148,24 +148,24 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10392");
 		
 	    test.log(Status.INFO, "[노래 들러줘] 발화"); 
-	    util.sendPost("노래 들러줘", uID, SampleApp_did, ServerName, Place, authToken);
+	    util.sendPost("노래 들러줘", uID, SampleApp_did, ServerName, Place,  authToken);
 	    
 	    test.log(Status.INFO, "[일시정지] 발화"); 
 	    util.sendPost("일시정지", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "audio_activity PAUSED 상태 확인"); 
-	    String audio_activity1 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity1 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity1.contains("PAUSED"));
 	    
 	    test.log(Status.INFO, "[그만] 발화"); 
 	    util.sendPost("그만", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.Stop directive_info 값 확인"); 
-	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("AudioPlayer.Stop"));
 	    
 	    test.log(Status.INFO, "audio_activity STOPPED 상태 확인"); 
-	    String audio_activity2 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity2 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity2.contains("STOPPED"));
 
 	}
@@ -190,7 +190,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    	if (i<10) {
 	    		test.log(Status.INFO, count+"번째 대기 체크 중 ("+count+"/10)");
 		    	System.out.println(count+"번째 대기 체크 중("+count+"/10)");
-			    TTS = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+			    TTS = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    	} else if (i>10) {
 	    		break;
 	    	}
@@ -198,7 +198,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    }
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackFinished event_info 값 확인"); 
-	    String event = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event.contains("AudioPlayer.PlaybackFinished"));
 	    
 	    test.log(Status.INFO, "[그만] 발화"); 
@@ -220,18 +220,18 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("노래 들려줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.Play directive_info 값 확인"); 
-	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("AudioPlayer.Play"));
 	    
 	    test.log(Status.INFO, "[몇시야] 발화"); 
 	    util.sendPost("몇시야", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackFinished event_info 값 없음 확인"); 
-	    String event = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertFalse(event.contains("AudioPlayer.PlaybackPause"));
 	    
 	    test.log(Status.INFO, "audio_activity PLAYING 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PLAYING"));
 	    
 
@@ -253,11 +253,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("iv_repeat"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"repeat\\\":\"ONE\" 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"repeat\":\"ONE\""));
 
 	   
@@ -276,11 +276,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("iv_repeat"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"repeat\":\"NONE\" 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"repeat\":\"NONE\""));
  
 	}
@@ -298,11 +298,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("iv_repeat"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"repeat\":\"ALL\" 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"repeat\":\"ALL\""));
  
 	}
@@ -320,11 +320,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("셔플 해줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"shuffle\":true 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"shuffle\":true"));
  
 	}
@@ -342,11 +342,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("셔플 해제", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"shuffle\":false 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"shuffle\":false"));
  
 	}
@@ -364,11 +364,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("좋아요 해줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"favorite\":true 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"favorite\":true"));
  
 	}
@@ -386,11 +386,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("좋아요 해제", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"favorite\":false 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"favorite\":false"));
  
 	}
@@ -411,15 +411,15 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("iv_repeat"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \\\"repeat\\\":\\\"ONE\\\" 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"repeat\":\"ONE\""));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PAUSE"));
 
 	}
@@ -437,15 +437,15 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("iv_repeat"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"repeat\":\"NONE\" 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"repeat\":\"NONE\""));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PAUSE"));
  
 	}
@@ -463,15 +463,15 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("iv_repeat"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"repeat\":\"ALL\" 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"repeat\":\"ALL\""));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PAUSE"));
  
 	}
@@ -486,18 +486,18 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10405");
 
 		test.log(Status.INFO, "[셔플 해줘] 발화"); 
-	    util.sendPost("셔플 해줘", uID, SampleApp_did, ServerName, Place, authToken);
+	    util.sendPost("셔플 해줘", uID, SampleApp_did, ServerName, Place,  authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"shuffle\":true 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"shuffle\":true"));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PAUSE"));
  
 	}
@@ -515,15 +515,15 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("셔플 해제", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"shuffle\":false 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"shuffle\":false"));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PAUSE"));
  
 	}
@@ -541,15 +541,15 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("좋아요 해줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"favorite\":true 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"favorite\":true"));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PAUSE"));
  
 	}
@@ -567,15 +567,15 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("좋아요 해제", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.UpdateMetadata directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.UpdateMetadata"));
 	    
 	    test.log(Status.INFO, "directive값에 \"favorite\":false 확인"); 
-	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("\"favorite\":false"));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PAUSE"));
  
 	}
@@ -596,15 +596,15 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("가사 보여줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.ShowLyrics directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.ShowLyrics"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.ShowLyricsSucceeded event_info 값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.ShowLyricsSucceeded"));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PLAYING"));
 
 	}
@@ -622,15 +622,15 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("가사 닫아", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.HideLyrics directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.HideLyrics"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.HideLyricsSucceeded event_info 값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.HideLyricsSucceeded"));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PLAYING"));
  
 	}
@@ -651,15 +651,15 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("가사 보여줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.ShowLyrics directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.ShowLyrics"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.ShowLyricsSucceeded event_info 값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.ShowLyricsSucceeded"));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PAUSE"));
 
 	}
@@ -677,15 +677,15 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("가사 닫아", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.HideLyrics directive_info 값 확인"); 
-	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive_info = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive_info.contains("AudioPlayer.HideLyrics"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.HideLyricsSucceeded event_info 값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.HideLyricsSucceeded"));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PAUSE"));
  
 	}
@@ -700,27 +700,27 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10415");
 	    
 	    test.log(Status.INFO, "[부스트파크송 들려줘] 발화"); 
-	    util.sendPost("부스트파크송 들려줘", uID, SampleApp_did, ServerName, Place, authToken);
+	    util.sendPost("부스트파크송 들려줘", uID, SampleApp_did, ServerName, Place,  authToken);
 	    
 	    test.log(Status.INFO, "[이전] 발화"); 
 	    util.sendPost("이전", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "한곡만 재생시 미지원 TTS 확인");
-	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts1.contains("한 곡만 재생할 때는 지원하지 않는 기능이에요."));
 	    
 	    test.log(Status.INFO, "[다음] 발화"); 
-	    util.sendPost("다음", uID, SampleApp_did, ServerName, Place, authToken);
+	    util.sendPost("다음", uID, SampleApp_did, ServerName, Place,  authToken);
 	    
 	    test.log(Status.INFO, "한곡만 재생시 미지원 TTS 확인");
-	    String tts2 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts2 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts2.contains("한 곡만 재생할 때는 지원하지 않는 기능이에요."));
 	    
 	    test.log(Status.INFO, "[셔플해줘] 발화"); 
 	    util.sendPost("셔플해줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "한곡만 재생시 미지원 TTS 확인");
-	    String tts3 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts3 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts3.contains("한 곡만 재생할 때는 지원하지 않는 기능이에요."));
  
 	}
@@ -735,27 +735,27 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10415");
 	    
 	    test.log(Status.INFO, "[아이유 노래 들려줘] 발화"); 
-	    util.sendPost("아이유 노래 들려줘", uID, SampleApp_did, ServerName, Place, authToken);
+	    util.sendPost("아이유 노래 들려줘", uID, SampleApp_did, ServerName, Place,  authToken);
 	    
 	    test.log(Status.INFO, "[이전] 발화"); 
 	    util.sendPost("이전", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "intent 값 previous 확인");
-	    String intent1 = util.intent_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String intent1 = util.intent_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(intent1.contains("previous"));
 	    
 	    test.log(Status.INFO, "[다음] 발화"); 
 	    util.sendPost("다음", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "intent 값 next 확인");
-	    String intent2 = util.intent_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String intent2 = util.intent_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(intent2.contains("next"));
 	    
 	    test.log(Status.INFO, "[셔플해줘] 발화"); 
 	    util.sendPost("셔플해줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "intent 값 random 확인");
-	    String intent3 = util.intent_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String intent3 = util.intent_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(intent3.contains("random"));
  
 	}
@@ -777,11 +777,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("노래 들려줘", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackStarted event_info값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.PlaybackStarted"));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PLAYING"));
 	 
 	}
@@ -799,11 +799,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("btn_bar_play"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackPaused event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.PlaybackPaused"));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PAUSE"));
 	    
 	    test.log(Status.INFO, "[bar_player] 클릭"); 
@@ -817,11 +817,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("btn_play"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackPaused event_info 값 확인"); 
-	    String event_info3 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info3 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info3.contains("AudioPlayer.PlaybackPaused"));
 	    
 	    test.log(Status.INFO, "audio_activity PAUSE 상태 확인"); 
-	    String audio_activity2 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity2 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity2.contains("PAUSE"));
 	 
 	}
@@ -839,11 +839,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("btn_play"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackResumed event_info 값 확인"); 
-	    String event_info3 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info3 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info3.contains("AudioPlayer.PlaybackResumed"));
 	    
 	    test.log(Status.INFO, "audio_activity PLAYING 상태 확인"); 
-	    String audio_activity2 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity2 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity2.contains("PLAYING"));
 		    
 		test.log(Status.INFO, "[btn_collapsed] 클릭"); 
@@ -857,11 +857,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("btn_bar_play"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackResumed event_info 값 확인"); 
-	    String event_info2 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info2 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info2.contains("AudioPlayer.PlaybackResumed"));
 	    
 	    test.log(Status.INFO, "audio_activity PLAYING 상태 확인"); 
-	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity.contains("PLAYING"));
 
 	 
@@ -877,7 +877,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-10421");
 		
 		test.log(Status.INFO, "[부스트파크송 들려줘] 발화"); 
-	    util.sendPost("부스트파크송 들려줘", uID, SampleApp_did, ServerName, Place, authToken);
+	    util.sendPost("부스트파크송 들려줘", uID, SampleApp_did, ServerName, Place,  authToken);
 	    
 	    test.log(Status.INFO, "[반복 해제] 발화"); 
 	    util.sendPost("반복 해제", uID, SampleApp_did, ServerName, Place, authToken);
@@ -890,7 +890,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    	if (i<10) {
 	    		test.log(Status.INFO, count+"번째 대기 체크 중 ("+count+"/10)");
 		    	System.out.println(count+"번째 대기 체크 중("+count+"/10)");
-		    	audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+		    	audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    	} else if (i>10) {
 	    		break;
 	    	}
@@ -898,11 +898,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    }
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackResumed event_info 값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.PlaybackFinished"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.Stop directive_info 값 확인"); 
-	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String directive = util.directive_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(directive.contains("AudioPlayer.Stop"));
 
 	 
@@ -929,7 +929,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("btn_close"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackStopped event_info 값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.PlaybackStopped"));
 
 	}
@@ -955,7 +955,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.sendPost("그만", uID, SampleApp_did, ServerName, Place, authToken);
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackStopped event_info 값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.PlaybackStopped"));
 
 	}
@@ -984,7 +984,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    	if (i<10) {
 	    		test.log(Status.INFO, count+"번째 대기 체크 중 ("+count+"/10)");
 		    	System.out.println(count+"번째 대기 체크 중("+count+"/10)");
-		    	audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+		    	audio_activity = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    	} else if (i>10) {
 	    		break;
 	    	}
@@ -992,7 +992,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    }
 	    
 	    test.log(Status.INFO, "AudioPlayer.ProgressReportDelayElapsed event_info 값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.ProgressReportDelayElapsed"));
 
 	}
@@ -1016,7 +1016,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(310000);
 	    
 	    test.log(Status.INFO, "AudioPlayer.ProgressReportIntervalElapsed event_info 값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.ProgressReportIntervalElapsed"));
 	    
 	    test.log(Status.INFO, "[그만] 발화"); 
@@ -1046,7 +1046,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackResumed event_info 값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.PlaybackResumed"));
 	    
 	    test.log(Status.INFO, "[bar_player] 클릭"); 
@@ -1062,7 +1062,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "AudioPlayer.PlaybackResumed event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.PlaybackResumed"));
 
 	}
@@ -1081,7 +1081,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "AudioPlayer.NextCommandIssued event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.NextCommandIssued"));
 	    
 	    test.log(Status.INFO, "[btn_collapsed] 클릭"); 
@@ -1115,11 +1115,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "AudioPlayer.NextCommandIssued event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.NextCommandIssued"));
 	    
 	    test.log(Status.INFO, "audio_activity PLAYING 상태 확인"); 
-	    String audio_activity2 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity2 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity2.contains("PLAYING"));
 	    
 	    test.log(Status.INFO, "[btn_collapsed] 클릭"); 
@@ -1144,7 +1144,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("btn_bar_prev"));
 	    
 	    test.log(Status.INFO, "AudioPlayer.PreviousCommandIssued event_info 값 확인"); 
-	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info.contains("AudioPlayer.PreviousCommandIssued"));
 	    
 	    test.log(Status.INFO, "[bar_player] 클릭"); 
@@ -1156,7 +1156,7 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "AudioPlayer.PreviousCommandIssued event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.PreviousCommandIssued"));
 	    
 	    test.log(Status.INFO, "[btn_collapsed] 클릭"); 
@@ -1190,11 +1190,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "AudioPlayer.PreviousCommandIssued event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.PreviousCommandIssued"));
 	    
 	    test.log(Status.INFO, "audio_activity PLAYING 상태 확인"); 
-	    String audio_activity2 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, 5);
+	    String audio_activity2 = util.audio_activity_JsonParsing(uID, SampleApp_did, ServerName, Place, Service, 5);
 	    Assert.assertTrue(audio_activity2.contains("PLAYING"));
 	    
 	}
@@ -1216,11 +1216,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("iv_favorite"));
 	    
 	    test.log(Status.INFO, "좋아요 담기 TTS 확인");
-	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts1.contains("당신의 멜론 좋아요 리스트에 담았습니다."));
 	    
 	    test.log(Status.INFO, "AudioPlayer.FavoriteCommandIssued event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.FavoriteCommandIssued"));
 
 	}
@@ -1238,11 +1238,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    util.click(By.id("iv_favorite"));
 	    
 	    test.log(Status.INFO, "좋아요 해제 TTS 확인");
-	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts1.contains("당신의 멜론 좋아요 리스트에서 삭제했습니다."));
 	    
 	    test.log(Status.INFO, "AudioPlayer.FavoriteCommandIssued event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.FavoriteCommandIssued"));
 
 	}
@@ -1261,11 +1261,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "한곡 반복 TTS 확인");
-	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts1.contains("자우림 나비 반복할게요."));
 	    
 	    test.log(Status.INFO, "AudioPlayer.RepeatCommandIssued event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.RepeatCommandIssued"));
 	    
 	    test.log(Status.INFO, "[bar_player] 클릭"); 
@@ -1273,11 +1273,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "반복 해제 TTS 확인");
-	    String tts2 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts2 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts2.contains("반복을 해제했어요."));
 	    
 	    test.log(Status.INFO, "AudioPlayer.RepeatCommandIssued event_info 값 확인"); 
-	    String event_info2 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info2 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info2.contains("AudioPlayer.RepeatCommandIssued"));
 	    
 	    test.log(Status.INFO, "[iv_repeat] 클릭"); 
@@ -1285,11 +1285,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "전체 반복 TTS 확인");
-	    String tts3 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts3 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts3.contains("전체 반복할게요."));
 	    
 	    test.log(Status.INFO, "AudioPlayer.RepeatCommandIssued event_info 값 확인"); 
-	    String event_info3 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info3 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info3.contains("AudioPlayer.RepeatCommandIssued"));
 
 	}
@@ -1312,11 +1312,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "한곡 반복 TTS 확인");
-	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts1.contains("자우림 나비 반복할게요."));
 	    
 	    test.log(Status.INFO, "AudioPlayer.RepeatCommandIssued event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.RepeatCommandIssued"));
 	    
 	    test.log(Status.INFO, "[bar_player] 클릭"); 
@@ -1324,11 +1324,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "반복 해제 TTS 확인");
-	    String tts2 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts2 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts2.contains("반복을 해제했어요."));
 	    
 	    test.log(Status.INFO, "AudioPlayer.RepeatCommandIssued event_info 값 확인"); 
-	    String event_info2 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info2 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info2.contains("AudioPlayer.RepeatCommandIssued"));
 	    
 	    test.log(Status.INFO, "[iv_repeat] 클릭"); 
@@ -1336,11 +1336,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "전체 반복 TTS 확인");
-	    String tts3 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts3 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts3.contains("전체 반복할게요."));
 	    
 	    test.log(Status.INFO, "AudioPlayer.RepeatCommandIssued event_info 값 확인"); 
-	    String event_info3 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info3 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info3.contains("AudioPlayer.RepeatCommandIssued"));
 
 	}
@@ -1359,11 +1359,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "셔플 TTS 확인");
-	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts1.contains("셔플할게요."));
 	    
 	    test.log(Status.INFO, "AudioPlayer.ShuffleCommandIssued event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.ShuffleCommandIssued"));
 	    
 
@@ -1383,11 +1383,11 @@ public class AudioPlayer_Interface_01_공통 extends SDK_TestCase {
 	    Thread.sleep(2000);
 	    
 	    test.log(Status.INFO, "셔플 TTS 확인");
-	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String tts1 = util.TTS_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(tts1.contains("셔플을 해제할게요."));
 	    
 	    test.log(Status.INFO, "AudioPlayer.ShuffleCommandIssued event_info 값 확인"); 
-	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place);
+	    String event_info1 = util.event_info_JsonParsing(uID, SampleApp_did, ServerName, Place, Service);
 	    Assert.assertTrue(event_info1.contains("AudioPlayer.ShuffleCommandIssued"));
 	    
 
