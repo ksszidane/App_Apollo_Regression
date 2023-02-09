@@ -10,13 +10,14 @@
 		<parameter name="Server" value="STG" /> <!-- 서버값 대문자로  : PRD, STG -->
 		<parameter name="TestPlace" value="in" /> <!-- 사내 : in  // 사외 : out-->
 		<parameter name="ServiceName" value="adot" /> <!--  nugu / adot-->
-		<parameter name="deviceID_SampleApp" value="ALDFR7K5QIZLF9F3FBA3"/>
-		<parameter name="userID" value="ALDF3NYA6C0D0C654DD2"/>
-		<parameter name="MobileDevice" value="R3CMA0GBTQ"/>
+		<parameter name="deviceID" value="APL00000BTEPAZ6TEJNK"/>
+		<parameter name="userID" value="APL00000BTEPAZ4LHSLC"/>
+		<parameter name="MobileDevice" value="R33M4000CY"/>
 
 		
 		<!--
 		R3CMA0GBTQ              >   s20
+		R33M4000CY
 		-->
 		
 		<classes>

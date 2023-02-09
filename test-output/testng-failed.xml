@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="10" parallel="tests" name="Failed suite [ExtentReport]" guice-stage="DEVELOPMENT">
-  <parameter name="Project" value="SDK"/>
+  <parameter name="Project" value="Apollo"/>
   <parameter name="hubAddress" value="http://0.0.0.0:4723/wd/hub"/>
   <test thread-count="10" parallel="tests" name="Test_Project(failed)">
     <parameter name="MobileDevice" value="R33M4000CY"/>
     <parameter name="OS" value="Android"/>
-    <parameter name="Server" value="PRD"/>
-    <parameter name="TestPlace" value="out"/>
-    <parameter name="deviceID_SampleApp" value="ALDFR7K5QIZLF9F3FBA3"/>
-    <parameter name="userID" value="ALDF3NYA6C0D0C654DD2"/>
-    <parameter name="AppName" value="SDK"/>
-    <parameter name="Auth_Token_SampleApp" value="38C034E5E79341D096E6CCB8AD0FBE2E"/>
+    <parameter name="Server" value="STG"/>
+    <parameter name="ServiceName" value="adot"/>
+    <parameter name="TestPlace" value="in"/>
+    <parameter name="deviceID" value="APL00000BTEPAZ6TEJNK"/>
+    <parameter name="userID" value="APL00000BTEPAZ4LHSLC"/>
+    <parameter name="AppName" value="APOLLO_STG"/>
     <classes>
-      <class name="SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1">
+      <class name="Apollo_001_Test.Apollo_01_공통">
         <methods>
-          <include name="TC_01_01_67_Play_AudioPlayerTemplate1의_settingsfavorite_변동값확인" invocation-numbers="0"/>
           <include name="tearDownClass"/>
           <include name="setupClass"/>
+          <include name="TC_01_01_Test"/>
           <include name="BeforeMethod"/>
           <include name="AfterMethod"/>
         </methods>
-      </class> <!-- SDK_001_AudioPlayer_Interface.AudioPlayer_Interface_02_AudioPlayer_Template1 -->
+      </class> <!-- Apollo_001_Test.Apollo_01_공통 -->
     </classes>
   </test> <!-- Test_Project(failed) -->
 </suite> <!-- Failed suite [ExtentReport] -->

@@ -16,7 +16,7 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 	
 	
 	@Test(description = "SDK 리그레이션 TC : AudioPlayer_Interface_01-01-01")
-	public void TC_01_01_01_AudioState_IDLE에서_PLAYING_전환확인(Method method) throws Exception {
+	public void TC_01_01_Test(Method method) throws Exception {
 		
 		test.log(Status.INFO, "01_01_01_Audio State IDLE에서 PLAYING 전환 확인");
 		System.out.println("01_01_01_Audio State IDLE에서 PLAYING 전환 확인");

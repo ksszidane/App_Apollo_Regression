@@ -78,8 +78,8 @@
                     	<suiteXmlFile>main_suite.xml</suiteXmlFile>
                  	 </suiteXmlFiles>
 					<workingDirectory>target/</workingDirectory>
-					<argLine>
-						 -Xms1024m -Xmx2048m -XX:MaxPermSize=256m -Dfile.encoding=UTF-8
+					<argLine> <!-- 23/02/08 eclipse update "-XX:MaxPermSize=256m" 문구 제거 --> 
+						 -Xms1024m -Xmx2048m -Dfile.encoding=UTF-8
 					</argLine>	
                 </configuration>
             </plugin>
