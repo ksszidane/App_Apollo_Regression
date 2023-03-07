@@ -46,13 +46,6 @@
 		<version>1.1</version>
   	</dependency>
 
-
-
-	<dependency>
-		<groupId>android_ChipsApp</groupId>
-		<artifactId>android_ChipsApp</artifactId>
-		<version>1.0.0</version>
-	</dependency>
   </dependencies>
   
   <build>
