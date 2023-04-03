@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-ExtentReport" class="navigator-link">
-              <span class="suite-name border-passed">ExtentReport</span>
+              <span class="suite-name border-failed">ExtentReport</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,35 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,  1 skipped,  2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-ExtentReport" class="hide-methods failed suite-ExtentReport"> (hide)</a> <!-- hide-methods failed suite-ExtentReport -->
+                      <a href="#" panel-name="suite-ExtentReport" class="show-methods failed suite-ExtentReport"> (show)</a> <!-- show-methods failed suite-ExtentReport -->
+                    </span>
+                    <div class="method-list-content failed suite-ExtentReport">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="Apollo_001_Test.Apollo_01_공통" class="method navigator-link" hash-for-method="TC_002_006_001(public void Apollo_001_Test.Apollo_01_공통.TC_002_006_001(java.lang.reflect.Method) throws java.lang.E...)">TC_002_006_001(public void Apollo_001_Test.Apollo_01_공통.TC_002_006_001(java.lang.reflect.Method) throws java.lang.E...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-ExtentReport -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-ExtentReport" class="hide-methods skipped suite-ExtentReport"> (hide)</a> <!-- hide-methods skipped suite-ExtentReport -->
+                      <a href="#" panel-name="suite-ExtentReport" class="show-methods skipped suite-ExtentReport"> (show)</a> <!-- show-methods skipped suite-ExtentReport -->
+                    </span>
+                    <div class="method-list-content skipped suite-ExtentReport">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="Apollo_001_Test.Apollo_01_공통" class="method navigator-link" hash-for-method="TC_000_001_031(public void Apollo_001_Test.Apollo_01_공통.TC_000_001_031(java.lang.reflect.Method) throws java.lang.E...)">TC_000_001_031(public void Apollo_001_Test.Apollo_01_공통.TC_000_001_031(java.lang.reflect.Method) throws java.lang.E...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-ExtentReport -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +132,12 @@
                     <div class="method-list-content passed suite-ExtentReport">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ExtentReport" title="Apollo_001_Test.Apollo_01_공통" class="method navigator-link" hash-for-method="TC_002_005_001_sidemenu_profile_캐릭터프로필영역(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001_sidemenu_profile_캐릭터프로필영역(java.lang.reflect....)">TC_002_005_001_sidemenu_profile_캐릭터프로필영역(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001_sidemenu_profile_캐릭터프로필영역(java.lang.reflect....)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-ExtentReport" title="Apollo_001_Test.Apollo_01_공통" class="method navigator-link" hash-for-method="TC_002_005_001(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001(java.lang.reflect.Method) throws java.lang.E...)">TC_002_005_001(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001(java.lang.reflect.Method) throws java.lang.E...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExtentReport" title="Apollo_001_Test.Apollo_01_공통" class="method navigator-link" hash-for-method="TC_002_005_015(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_015(java.lang.reflect.Method) throws java.lang.E...)">TC_002_005_015(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_015(java.lang.reflect.Method) throws java.lang.E...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ExtentReport -->
@@ -119,6 +152,104 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-ExtentReport" class="panel ExtentReport">
+          <div class="suite-ExtentReport-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Apollo_001_Test.Apollo_01_공통</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_002_006_001(public void Apollo_001_Test.Apollo_01_공통.TC_002_006_001(java.lang.reflect.Method) throws java.lang.E...)">
+                  </a> <!-- TC_002_006_001(public void Apollo_001_Test.Apollo_01_공통.TC_002_006_001(java.lang.reflect.Method) throws java.lang.E...) -->
+                  <span class="method-name">TC_002_006_001</span>
+                  <span class="parameters">(public void Apollo_001_Test.Apollo_01_공통.TC_002_006_001(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: toolbar_button_close (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at unit.Utilities.WaitfindElement(Utilities.java:156)
+	at unit.Utilities.click(Utilities.java:1397)
+	at Apollo_001_Test.Apollo_01_공통.TC_002_006_001(Apollo_01_공통.java:507)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;XPVFW1QHC4&apos;, ip: &apos;fe80:0:0:0:1cc6:2650:c43:4c76%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.2.1&apos;, java.version: &apos;17.0.2&apos;
+Driver info: unit.Utilities
+Capabilities {appActivity: com.skt.nugu.visual.splash...., appPackage: com.skt.nugu.apollo.stg, automationName: UIAutomator2, chromedriverArgs: {browserName: chrome, goog:chromeOptions: {args: [], extensions: [], w3c: true}}, chromedriverExecutable: ~/Library/chromedriver_mac6..., databaseEnabled: false, desired: {appActivity: com.skt.nugu.visual.splash...., appPackage: com.skt.nugu.apollo.stg, automationName: UIAutomator2, chromedriverArgs: {browserName: chrome, goog:chromeOptions: {args: [], extensions: [], w3c: true}}, chromedriverExecutable: ~/Library/chromedriver_mac6..., deviceName: Android, extractChromeAndroidPackageFromContextName: true, focused: true, newCommandTimeout: 600000, noReset: true, platformName: android, recreateChromeDriverSessions: false, showChromedriverLog: true, udid: R33M4000CY}, deviceApiLevel: 31, deviceManufacturer: samsung, deviceModel: SM-N976N, deviceName: R33M4000CY, deviceScreenDensity: 420, deviceScreenSize: 1080x2280, deviceUDID: R33M4000CY, extractChromeAndroidPackageFromContextName: true, focused: true, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 600000, noReset: true, pixelRatio: 2.625, platform: LINUX, platformName: Android, platformVersion: 12, recreateChromeDriverSessions: false, showChromedriverLog: true, statBarHeight: 85, takesScreenshot: true, udid: R33M4000CY, viewportRect: {height: 1984, left: 0, top: 85, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 6deec99d-6834-4981-9492-a86e84d87e5e
+*** Element info: {Using=id, value=toolbar_button_close}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at unit.Utilities.execute(Utilities.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at unit.Utilities.findElement(Utilities.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at unit.Utilities.findElementById(Utilities.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at unit.Utilities.findElement(Utilities.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(A. Hotfix Regression Test : 002-006-001 home Web Viewer 웹 뷰어)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ExtentReport-class-failed -->
+          <div class="suite-ExtentReport-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">Apollo_001_Test.Apollo_01_공통</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_000_001_031(public void Apollo_001_Test.Apollo_01_공통.TC_000_001_031(java.lang.reflect.Method) throws java.lang.E...)">
+                  </a> <!-- TC_000_001_031(public void Apollo_001_Test.Apollo_01_공통.TC_000_001_031(java.lang.reflect.Method) throws java.lang.E...) -->
+                  <span class="method-name">TC_000_001_031</span>
+                  <span class="parameters">(public void Apollo_001_Test.Apollo_01_공통.TC_000_001_031(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">org.testng.SkipException: Skipping this exception
+	at Apollo_001_Test.Apollo_01_공통.TC_000_001_031(Apollo_01_공통.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(A. Hotfix Regression Test : 000-001-003 Android + 다른 앱 위에 그리기)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ExtentReport-class-skipped -->
           <div class="suite-ExtentReport-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -127,12 +258,22 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_002_005_001_sidemenu_profile_캐릭터프로필영역(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001_sidemenu_profile_캐릭터프로필영역(java.lang.reflect....)">
-                  </a> <!-- TC_002_005_001_sidemenu_profile_캐릭터프로필영역(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001_sidemenu_profile_캐릭터프로필영역(java.lang.reflect....) -->
-                  <span class="method-name">TC_002_005_001_sidemenu_profile_캐릭터프로필영역</span>
-                  <span class="parameters">(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001_sidemenu_profile_캐릭터프로필영역(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <a name="TC_002_005_001(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001(java.lang.reflect.Method) throws java.lang.E...)">
+                  </a> <!-- TC_002_005_001(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001(java.lang.reflect.Method) throws java.lang.E...) -->
+                  <span class="method-name">TC_002_005_001</span>
+                  <span class="parameters">(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001(java.lang.reflect.Method) throws java.lang.Exception)</span>
                   <em>
 (A. Hotfix Regression Test : 002-005-001 sidemenu_profile 캐릭터 프로필 영역(os 동일))                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_002_005_015(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_015(java.lang.reflect.Method) throws java.lang.E...)">
+                  </a> <!-- TC_002_005_015(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_015(java.lang.reflect.Method) throws java.lang.E...) -->
+                  <span class="method-name">TC_002_005_015</span>
+                  <span class="parameters">(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_015(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <em>
+(A. Hotfix Regression Test : 002-005-015 Sidemenu_1 사이드메뉴 프로필 영역)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -199,16 +340,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_002_005_001_sidemenu_profile_캐릭터프로필영역')
+data.setCell(0, 1, 'TC_002_005_001')
 data.setCell(0, 2, 'Apollo_001_Test.Apollo_01_공통')
-data.setCell(0, 3, 21341);
+data.setCell(0, 3, 67113);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TC_002_005_015')
+data.setCell(1, 2, 'Apollo_001_Test.Apollo_01_공통')
+data.setCell(1, 3, 63120);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TC_002_006_001')
+data.setCell(2, 2, 'Apollo_001_Test.Apollo_01_공통')
+data.setCell(2, 3, 44948);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TC_000_001_031')
+data.setCell(3, 2, 'Apollo_001_Test.Apollo_01_공통')
+data.setCell(3, 3, 3);
 window.suiteTableData['ExtentReport']= { tableData: data, tableDiv: 'times-div-ExtentReport'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-ExtentReport">
               </div> <!-- times-div-ExtentReport -->
             </div> <!-- times-div -->
@@ -240,20 +393,58 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">BeforeMethod(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001_sidemenu_profile_캐릭터프로필영역(java.lang.reflect....)</span>
-                <span class="method-start">10521 ms</span>
+                <span class="method-name">BeforeMethod(public void Apollo_001_Test.Apollo_01_공통.TC_000_001_031(java.lang.reflect.Method) throws java.lang.E...)</span>
+                <span class="method-start">9381 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC_002_005_001_sidemenu_profile_캐릭터프로필영역(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001_sidemenu_profile_캐릭터프로필영역(java.lang.reflect....)</span>
-                <span class="method-start">10525 ms</span>
+                <span class="method-name">TC_000_001_031(public void Apollo_001_Test.Apollo_01_공통.TC_000_001_031(java.lang.reflect.Method) throws java.lang.E...)</span>
+                <span class="method-start">9385 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">AfterMethod([TestResult name=TC_002_005_001_sidemenu_profile_캐릭터프로필영역 status=SUCCESS method=Apollo_01_공통.TC_002_...)</span>
-                <span class="method-start">31870 ms</span>
+                <span class="method-name">AfterMethod([TestResult name=TC_000_001_031 status=SKIP method=Apollo_01_공통.TC_000_001_031(java.lang.reflect.Met...)</span>
+                <span class="method-start">9389 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_002_005_001(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001(java.lang.reflect.Method) throws java.lang.E...)</span>
+                <span class="method-start">9390 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_001(java.lang.reflect.Method) throws java.lang.E...)</span>
+                <span class="method-start">9390 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_002_005_001 status=SUCCESS method=Apollo_01_공통.TC_002_005_001(java.lang.reflect....)</span>
+                <span class="method-start">76504 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_002_005_015(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_015(java.lang.reflect.Method) throws java.lang.E...)</span>
+                <span class="method-start">76505 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void Apollo_001_Test.Apollo_01_공통.TC_002_005_015(java.lang.reflect.Method) throws java.lang.E...)</span>
+                <span class="method-start">76505 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_002_005_015 status=SUCCESS method=Apollo_01_공통.TC_002_005_015(java.lang.reflect....)</span>
+                <span class="method-start">139627 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod(public void Apollo_001_Test.Apollo_01_공통.TC_002_006_001(java.lang.reflect.Method) throws java.lang.E...)</span>
+                <span class="method-start">139628 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_002_006_001(public void Apollo_001_Test.Apollo_01_공통.TC_002_006_001(java.lang.reflect.Method) throws java.lang.E...)</span>
+                <span class="method-start">139629 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod([TestResult name=TC_002_006_001 status=FAILURE method=Apollo_01_공통.TC_002_006_001(java.lang.reflect....)</span>
+                <span class="method-start">184584 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass(STG, APOLLO_STG, in, R33M4000CY, adot, APL00000BTEPAZ4LHSLC, APL00000BTEPAZ6TEJNK)</span>
-                <span class="method-start">31871 ms</span>
+                <span class="method-start">185297 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

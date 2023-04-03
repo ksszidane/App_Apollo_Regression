@@ -17,9 +17,10 @@
         <methods>
           <include name="tearDownClass"/>
           <include name="setupClass"/>
+          <include name="TC_002_006_001" invocation-numbers="0"/>
           <include name="BeforeMethod"/>
-          <include name="TC_002_005_001_sidemenu_profile_캐릭터프로필영역" invocation-numbers="0"/>
           <include name="AfterMethod"/>
+          <include name="TC_000_001_031" invocation-numbers="0"/>
         </methods>
       </class> <!-- Apollo_001_Test.Apollo_01_공통 -->
     </classes>

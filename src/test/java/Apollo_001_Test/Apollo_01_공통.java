@@ -1,9 +1,13 @@
 package Apollo_001_Test;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 import java.lang.reflect.Method;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -16,8 +20,22 @@ import unit.Utilities.Direction;
 public class Apollo_01_공통 extends APOLLO_TestCase {
 	
 	
+	@Test(description = "A. Hotfix Regression Test : 000-001-003 Android + 다른 앱 위에 그리기")
+	public void TC_000_001_031(Method method) throws Exception {
+		
+		test.log(Status.INFO, "000-001-003 Android + 다른 앱 위에 그리기");
+		System.out.println("000-001-003 Android + 다른 앱 위에 그리기");
+		
+		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-24187");
+		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-24187");
+		
+		throw new SkipException("Skipping this exception");
+		
+			
+	}
+	
 	//@Test(description = "A. Hotfix Regression Test : 000-011-001 widget_basic 위젯 + 기본 UI")
-	public void TC_000_011_001_widget_basic(Method method) throws Exception {
+	public void TC_000_011_001(Method method) throws Exception {
 		
 		test.log(Status.INFO, "000-011-001 widget_basic 위젯 + 기본 UI 확인");
 		System.out.println("000-011-001 widget_basic 위젯 + 기본 UI 확인");
@@ -89,8 +107,34 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 
 	}
 	
+	//@Test(description = "A. Hotfix Regression Test : 001-003-001 login_1 T아이디 로그인 이력 X / O")
+	public void TC_001_003_001(Method method) throws Exception {
+			
+		test.log(Status.INFO, "001-003-001 login_1 T아이디 로그인 이력 X / O");
+		System.out.println("001-003-001 login_1 T아이디 로그인 이력 X / O");
+		
+		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-23011");
+		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-23011");
+		
+		throw new SkipException("Skipping this exception");
+				
+	}
+	
+	//@Test(description = "A. Hotfix Regression Test : 001-004-002 login_14 서비스 계정 연결")
+	public void TC_001_004_002(Method method) throws Exception {
+			
+		test.log(Status.INFO, "001-004-002 login_14 서비스 계정 연결");
+		System.out.println("001-004-002 login_14 서비스 계정 연결");
+		
+		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-19913");
+		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-199131");
+		
+		throw new SkipException("Skipping this exception");
+				
+	}
+	
 	//@Test(description = "A. Hotfix Regression Test : 002-001-004 home common 홈 공통")
-	public void TC_002_001_004_home_common_홈_공통(Method method) throws Exception {
+	public void TC_002_001_004(Method method) throws Exception {
 		
 		test.log(Status.INFO, "002-001-004 home_common 홈_공통");
 		System.out.println("002-001-004 home_common 홈_공통");
@@ -99,7 +143,7 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-20644");
 		
 		test.log(Status.INFO,"Side Menu 레드닷 확인");
-		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("left_menu_red_dot")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("left_menu_button_container")));
 	
 		test.log(Status.INFO,"side menu button 버튼 클릭");
 		util.click(By.id("left_menu_button"));
@@ -148,8 +192,8 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 		test.log(Status.INFO,"노티 리스트 뷰 영역 확인");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("noti_list")));
 		
-		test.log(Status.INFO,"알 센터 닫기 버튼 클릭");
-		util.click(By.id("action_close"));
+		test.log(Status.INFO,"알람 센터 닫기 버튼 클릭");
+		util.click(By.id("button_close"));
 		
 		test.log(Status.INFO,"홈 화면 이동 후 홈 캐릭터 아바타 확인");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("avatar_view_fragment")));
@@ -176,7 +220,8 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("avatar_shop_purchase")));
 		
 		test.log(Status.INFO,"이전 버튼으로 홈화면 이동 ");
-		util.click(By.xpath("//android.widget.ImageButton[contains(@content-desc, '이전')]"));
+		util.click(By.xpath("//android.widget.ImageView[contains(@content-desc, '이전')]"));
+		
 		
 		test.log(Status.INFO,"홈 화면 이동 후 홈 캐릭터 아바타 확인");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("avatar_view_fragment")));
@@ -216,6 +261,8 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-20661");
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-20661");
 		
+		throw new SkipException("Skipping this exception");
+		
 		
 	}
 	
@@ -228,12 +275,14 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-20663");
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-20663");
 		
+		throw new SkipException("Skipping this exception");
+		
 		
 		
 	}
 	
 	@Test(description = "A. Hotfix Regression Test : 002-005-001 sidemenu_profile 캐릭터 프로필 영역(os 동일)")
-	public void TC_002_005_001_sidemenu_profile_캐릭터프로필영역(Method method) throws Exception {
+	public void TC_002_005_001(Method method) throws Exception {
 		
 		test.log(Status.INFO, "002-005-001 sidemenu_profile 캐릭터 프로필 영역(os 동일)");
 		System.out.println("002-005-001 sidemenu_profile 캐릭터 프로필 영역(os 동일)");
@@ -251,10 +300,18 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 		Assert.assertTrue(util.waitForActivity("com.skt.nugu.visual.setting.SettingActivity"));
 		
 		test.log(Status.INFO,"이전 버튼 클릭");
-		util.click(By.xpath("//android.widget.ImageButton[contains(@content-desc, '위로 이동')]"));
+		util.click(By.xpath("//android.widget.ImageView[contains(@content-desc, '이전')]"));
+		
+		test.log(Status.INFO,"side menu button 버튼 클릭");
+		util.click(By.id("left_menu_button"));
 		
 		test.log(Status.INFO,"사이드드로어 캐릭터 영역 클릭");
 		util.click(By.id("character_thumb"));
+		
+		test.log(Status.INFO,"캐릭터 꾸미기 팝업창 있으면 확인 버튼 터치");
+		if(util.isElementPresent_Assertfunc(By.id("positiveButtonText"))) {
+			util.click(By.id("positiveButtonText"));
+		} 
 		
 		test.log(Status.INFO,"스토어 화면 노출 확인 주요 엘리먼트 확인");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("filtering_layout")));
@@ -264,7 +321,7 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("cone_point")));
 		
 		test.log(Status.INFO,"이전 버튼 클릭");
-		util.click(By.xpath("//android.widget.ImageButton[contains(@content-desc, '이전')]"));
+		util.click(By.xpath("//android.widget.ImageView[contains(@content-desc, '이전')]"));
 		
 		test.log(Status.INFO,"side menu button 버튼 클릭");
 		util.click(By.id("left_menu_button"));
@@ -278,6 +335,11 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 		test.log(Status.INFO,"캐릭터 꾸미기 버튼 클릭");
 		util.click(By.xpath("//android.widget.TextView[contains(@text, '캐릭터꾸미기')]"));
 		
+		test.log(Status.INFO,"캐릭터 꾸미기 팝업창 있으면 확인 버튼 터치");
+		if(util.isElementPresent_Assertfunc(By.id("positiveButtonText"))) {
+			util.click(By.id("positiveButtonText"));
+		} 
+		
 		test.log(Status.INFO,"스토어 화면 노출 확인 주요 엘리먼트 확인");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("filtering_layout")));
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("decoration_tab_recyclerview")));
@@ -286,7 +348,7 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("cone_point")));
 		
 		test.log(Status.INFO,"이전 버튼 클릭");
-		util.click(By.xpath("//android.widget.ImageButton[contains(@content-desc, '이전')]"));
+		util.click(By.xpath("//android.widget.ImageView[contains(@content-desc, '이전')]"));
 		
 		test.log(Status.INFO,"side menu button 버튼 클릭");
 		util.click(By.id("left_menu_button"));
@@ -296,6 +358,180 @@ public class Apollo_01_공통 extends APOLLO_TestCase {
 		
 		test.log(Status.INFO,"루틴 레드닷 확인 ");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.ImageView[2]")));
+		
+		
+		
+	}
+	
+	@Test(description = "A. Hotfix Regression Test : 002-005-015 Sidemenu_1 사이드메뉴 프로필 영역")
+	public void TC_002_005_015(Method method) throws Exception {
+		
+		//002-005-001케이스와 종속됨.
+		test.log(Status.INFO, "002-005-015 Sidemenu_1 사이드메뉴 프로필 영역");
+		System.out.println("002-005-015 Sidemenu_1 사이드메뉴 프로필 영역");
+		
+		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-25915");
+		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-25915");
+		
+		test.log(Status.INFO, "페이지 하단으로 스크롤");
+		util.scrollDown();
+	
+		test.log(Status.INFO, "튜토리얼 버튼 위치 및 버튼명 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '튜토리얼')]")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.ScrollView/android.widget.LinearLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat[2]/android.view.ViewGroup/android.widget.TextView")));
+		
+		test.log(Status.INFO, "페이지 상단으로 스크롤");
+		util.scrollUp();
+		
+		test.log(Status.INFO, "캐릭터 네임 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '옐옐옐옐옐')]")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("character_name")));
+		
+		test.log(Status.INFO,"재화 영역 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("icon_cone")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("cone_point")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("cube_point")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("icon_cube")));
+		
+		test.log(Status.INFO,"재화 영역 클릭");
+		util.click(By.id("cone_point"));
+		
+		test.log(Status.INFO,"재화 영역 클릭시 팝업 비노출, 캐릭터 프로필 설정으로 연결 확인");
+		if(util.isElementPresent_Assertfunc(By.id("positiveButtonText"))) {
+			util.click(By.id("positiveButtonText"));
+		} 
+		
+		test.log(Status.INFO,"스토어 화면 노출 확인 주요 엘리먼트 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("filtering_layout")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("decoration_tab_recyclerview")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("character_holder")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("cube_point")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("cone_point")));
+		
+		test.log(Status.INFO,"이전 버튼 클릭");
+		util.click(By.xpath("//android.widget.ImageView[contains(@content-desc, '이전')]"));
+		
+		test.log(Status.INFO,"side menu button 버튼 클릭");
+		util.click(By.id("left_menu_button"));
+		
+		test.log(Status.INFO,"캐릭터 프로필 설정 버튼 클릭");
+		util.click(By.id("character_profile_setting"));
+		
+		test.log(Status.INFO,"캐릭터 프로필 설정 화면 타이틀 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '캐릭터 프로필 설정')]")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '캐릭터 이름')]")));
+		
+		test.log(Status.INFO,"back 버튼 클릭수 다시 side menu button 버튼 클릭");
+		util.click(By.id("back_button"));
+		util.click(By.id("left_menu_button"));
+		
+		test.log(Status.INFO,"리워드 내역 버튼명 확인");
+		String 리워드내역 = util.getText(By.xpath("//android.widget.LinearLayout/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView"));
+		Assert.assertEquals(리워드내역, "리워드 내역");
+		
+		test.log(Status.INFO,"리워드 레드닷 비노출 확인");
+		Assert.assertFalse(util.isElementPresent_Assertfunc(By.xpath("//android.widget.LinearLayout/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ImageView[2]")));
+		
+		test.log(Status.INFO,"퀘스트 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '퀘스트')]")));
+		
+		test.log(Status.INFO,"리워드 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '리워드 내역')]")));
+		
+		test.log(Status.INFO,"캐릭터꾸미기 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '캐릭터꾸미기')]")));
+		
+		test.log(Status.INFO, "루틴 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '루틴')]")));
+		
+		test.log(Status.INFO, "캘린더 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '캘린더')]")));
+		
+		test.log(Status.INFO, "알람 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '알람')]")));
+		
+		test.log(Status.INFO, "TMAP 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, 'TMAP')]")));
+		
+		test.log(Status.INFO, "TV 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, 'TV')]")));
+		
+		test.log(Status.INFO, "게임 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '게임')]")));
+		
+		test.log(Status.INFO, "포토 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '포토')]")));
+		
+		test.log(Status.INFO, "음악추천 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '음악추천')]")));
+		util.scrollDown();
+		
+		test.log(Status.INFO, "큐피드 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '큐피드')]")));
+		
+		test.log(Status.INFO, "튜터 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '튜터')]")));
+		util.click(By.id("close_button"));
+	}
+	
+	@Test(description = "A. Hotfix Regression Test : 002-006-001 home Web Viewer 웹 뷰어")
+	public void TC_002_006_001(Method method) throws Exception {
+		
+		test.log(Status.INFO, "002-006-001 home Web Viewer 웹 뷰어");
+		System.out.println("002-006-001 home Web Viewer 웹 뷰어");
+		
+		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-25915");
+		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-25915");
+		
+		test.log(Status.INFO, "큐피드 웹뷰 호출");
+		util.sendPost("큐피드", uID, dID, ServerName, Place, App);
+		
+		test.log(Status.INFO, "큐피드 웹뷰 타이틀 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("toolbar_title")));
+		
+		test.log(Status.INFO, "큐피드 웹뷰 닫기 터치");
+		util.click(By.id("toolbar_button_close"));
+		
+		test.log(Status.INFO, "홈 화면 이동 확인");
+		util.waitForIsElementPresent(By.xpath(xPath.에이닷_홈));
+		
+		test.log(Status.INFO, "라이트라인 게임 웹뷰 호출");
+		util.sendPost("라이트라인 게임", uID, dID, ServerName, Place, App);
+		Thread.sleep(3000);
+		
+		test.log(Status.INFO, "사운드 설정 토글 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("app_toolbar")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("button_sound")));
+		
+		test.log(Status.INFO, "큐피드 웹뷰 닫기 터치");
+		util.click(By.id("button_close"));
+		
+		test.log(Status.INFO, "설정 명령어 전송");
+		util.sendPost("설정", uID, dID, ServerName, Place, App);
+		util.click(By.xpath("//android.widget.TextView[contains(@text, '설정 보기')]"));
+		
+		util.click(By.xpath("//android.widget.TextView[contains(@text, '개인 정보')]"));
+		util.click(By.xpath("//android.widget.TextView[contains(@text, '계정 관리')]"));
+		
+		test.log(Status.INFO, "웹뷰하단 네비바 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.Button[contains(@text, '이전')]")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.Button[contains(@text, '다음')]")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.Button[contains(@text, '새로고침')]")));
+		
+		test.log(Status.INFO, "이전/새로고침 확인");
+		util.click(By.xpath("//android.widget.TextView[contains(@text, '닉네임')]"));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.Button[contains(@text, '비밀번호 확인')]")));
+		util.type(By.xpath("//android.widget.EditText"), "asdasdasd");
+		
+		String getPW1 = util.getText(By.xpath("//android.widget.EditText"));
+		util.click(By.xpath("//android.widget.Button[contains(@text, '새로고침')]"));
+		
+		String getPW2 = util.getText(By.xpath("//android.widget.EditText"));
+		Assert.assertFalse(getPW2.contains(getPW1));
+		
+		util.click(By.xpath("//android.widget.Button[contains(@text, '이전')]"));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.Button[contains(@text, 'T아이디 정보관리')]")));
+		
 		
 		
 		
