@@ -22,7 +22,7 @@ public class Data {
 	
 	public static String 날씨발화 [] = {"날씨 알려줘","부산 날씨 어떄?","당산동 일기예보 알려줘", "대전 날씨는?", "날씨 정보", "에버랜드 날씨 상태", "날씨 예보", "날씨 정보"};
 	
-	public static String 날씨모션코드 [] = {"M_Talk_0001","Weather_Sunny","Weather_rain", "Weather_Cloud"};
+	public static String 날씨모션코드 [] = {"M_Talk_0001","L_Weather_Sunny","L_Weather_rain", "L_Weather_Cloud", "L_Weather_Low"};
 	public List<String> 날씨모션코드_list = Arrays.asList(날씨모션코드);  
 	public static Set<String> 날씨모션코드_set = new HashSet<String>(Arrays.asList(날씨모션코드));
 
