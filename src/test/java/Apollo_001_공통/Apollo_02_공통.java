@@ -8,13 +8,14 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
-import Apollo_000_xPath.xPath;
+import Apollo_Data.Data;
+import Apollo_Data.xPath;
 import TestNG_Set.APOLLO_TestCase;
 import junit.framework.Assert;
 
 public class Apollo_02_공통 extends APOLLO_TestCase {
 	
-	//@Test(description = "A. Hotfix Regression Test : 000-011-001 widget_basic 위젯 + 기본 UI")
+	@Test(description = "A. Hotfix Regression Test : 000-011-001 widget_basic 위젯 + 기본 UI")
 	public void TC_000_011_001(Method method) throws Exception {
 		
 		test.log(Status.INFO, "000-011-001 widget_basic 위젯 + 기본 UI 확인");
@@ -79,7 +80,7 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		test.log(Status.INFO,"음악 추천해줘 발화 로그 조회");
 		//Assert.assertTrue(util.TTS_Assertfunc_ContainsSet(uID, dID, ServerName, Place, Service, data.음악시작_set));
 		String tts_message = util.getText(By.id("message"));
-		Assert.assertTrue(util.dataCheck_Contains(tts_message, data.음악시작_set));
+		Assert.assertTrue(util.dataCheck_Contains(tts_message, Data.음악시작_set));
 		
 		
 		test.log(Status.INFO, "다른 앱 위에 그리기 권한 팝업 창 있으면 터치");
@@ -99,7 +100,7 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 
 	}
 	
-	//@Test(description = "A. Hotfix Regression Test : 001-003-001 login_1 T아이디 로그인 이력 X / O")
+	@Test(description = "A. Hotfix Regression Test : 001-003-001 login_1 T아이디 로그인 이력 X / O")
 	public void TC_001_003_001(Method method) throws Exception {
 			
 		test.log(Status.INFO, "001-003-001 login_1 T아이디 로그인 이력 X / O");
@@ -112,7 +113,7 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 				
 	}
 	
-	//@Test(description = "A. Hotfix Regression Test : 001-004-002 login_14 서비스 계정 연결")
+	@Test(description = "A. Hotfix Regression Test : 001-004-002 login_14 서비스 계정 연결")
 	public void TC_001_004_002(Method method) throws Exception {
 			
 		test.log(Status.INFO, "001-004-002 login_14 서비스 계정 연결");
@@ -252,7 +253,7 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		
 	}
 	
-	//@Test(description = "A. Hotfix Regression Test : 002-003-001 home glm")
+	@Test(description = "A. Hotfix Regression Test : 002-003-001 home glm")
 	public void TC_002_003_001(Method method) throws Exception {
 		
 		test.log(Status.INFO, "002-001-004 home_common 홈_공통");
@@ -266,7 +267,7 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		
 	}
 	
-	//@Test(description = "A. Hotfix Regression Test : 002-004-001 home_taskoriented 홈_TO")
+	@Test(description = "A. Hotfix Regression Test : 002-004-001 home_taskoriented 홈_TO")
 	public void TC_002_004_001(Method method) throws Exception {
 		
 		test.log(Status.INFO, "002-004-001 home_taskoriented 홈_TO");
@@ -281,7 +282,7 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		
 	}
 	
-	//@Test(description = "A. Hotfix Regression Test : 002-005-001 sidemenu_profile 캐릭터 프로필 영역(os 동일)")
+	@Test(description = "A. Hotfix Regression Test : 002-005-001 sidemenu_profile 캐릭터 프로필 영역(os 동일)")
 	public void TC_002_005_001(Method method) throws Exception {
 		
 		test.log(Status.INFO, "002-005-001 sidemenu_profile 캐릭터 프로필 영역(os 동일)");
@@ -363,7 +364,7 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		
 	}
 	
-	//@Test(description = "A. Hotfix Regression Test : 002-005-015 Sidemenu_1 사이드메뉴 프로필 영역")
+	@Test(description = "A. Hotfix Regression Test : 002-005-015 Sidemenu_1 사이드메뉴 프로필 영역")
 	public void TC_002_005_015(Method method) throws Exception {
 		
 		//002-005-001케이스와 종속됨.
@@ -474,7 +475,7 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		util.click(By.id("close_button"));
 	}
 	
-	//@Test(description = "A. Hotfix Regression Test : 002-006-001 home Web Viewer 웹 뷰어")
+	@Test(description = "A. Hotfix Regression Test : 002-006-001 home Web Viewer 웹 뷰어")
 	public void TC_002_006_001(Method method) throws Exception {
 		
 		test.log(Status.INFO, "002-006-001 home Web Viewer 웹 뷰어");
@@ -538,7 +539,7 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		
 	}
 	
-	//@Test(description = "A. Hotfix Regression Test : 003-002-004 setting_privacy_4 설정 + 개인 정보 + 로그아웃")
+	@Test(description = "A. Hotfix Regression Test : 003-002-004 setting_privacy_4 설정 + 개인 정보 + 로그아웃")
 	public void TC_003_002_004(Method method) throws Exception {
 		
 		test.log(Status.INFO, "003-002-004 setting_privacy_4 설정 + 개인 정보 + 로그아웃");

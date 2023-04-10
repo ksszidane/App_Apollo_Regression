@@ -13,15 +13,17 @@
     <parameter name="userID" value="APL00000CAP8UMKRSNB4"/>
     <parameter name="AppName" value="APOLLO_STG"/>
     <classes>
-      <class name="Apollo_001_공통.Apollo_02_공통">
+      <class name="Apollo_001_공통.Apollo_03_공통">
         <methods>
+          <include name="TC_008_001_002" invocation-numbers="0"/>
           <include name="tearDownClass"/>
           <include name="setupClass"/>
+          <include name="TC_010_003_001" invocation-numbers="0"/>
           <include name="BeforeMethod"/>
+          <include name="TC_007_003_001" invocation-numbers="0"/>
           <include name="AfterMethod"/>
-          <include name="TC_002_001_004" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Apollo_001_공통.Apollo_02_공통 -->
+      </class> <!-- Apollo_001_공통.Apollo_03_공통 -->
     </classes>
   </test> <!-- Test_Project(failed) -->
 </suite> <!-- Failed suite [ExtentReport] -->
