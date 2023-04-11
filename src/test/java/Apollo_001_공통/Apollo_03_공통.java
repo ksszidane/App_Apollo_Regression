@@ -277,12 +277,20 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 			util.Android_BackKey();
 		}
 		Assert.assertTrue(util.Motion_JsonParsing(uID, dID, ServerName, Service, "끝말잇기 키보드로 시작").contains("Accepted_0001"));
-		for(int i=0; i<3; i++) {
+		for(int i=0; i<10; i++) {
 			Thread.sleep(1000);
 			if((util.isElementPresent(By.id("home_text_input")))) {
 				util.Android_BackKey();
 			}
 		}
+		Thread.sleep(5000);
+		for(int i=0; i<10; i++) {
+			Thread.sleep(1000);
+			if((util.isElementPresent(By.id("home_text_input")))) {
+				util.Android_BackKey();
+			}
+		}
+		
 		
 		
 	}
