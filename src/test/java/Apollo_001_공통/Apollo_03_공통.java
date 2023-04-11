@@ -136,14 +136,15 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		util.waitForIsElementPresent(By.xpath(xPath.에이닷_홈));
 		
 		test.log(Status.INFO, "'뉴스 들려줘' 발화 랜덤 명령어 전송");
-		util.A_sendPost(util.ramdomCommand(Data.뉴스발화), uID, dID, ServerName);
+		String 발화 = util.ramdomCommand(Data.뉴스발화);
+		util.A_sendPost(발화, uID, dID, ServerName);
 		
 		test.log(Status.INFO, "'TTS 및 모션 확인");
 		String tts_message = util.getText(By.id("message"));
 		Assert.assertTrue(util.dataCheck_Contains(tts_message, Data.뉴스시작_set));
 		
 		util.A_sendPost("뉴스 종료", uID, dID, ServerName);
-		Assert.assertTrue(util.Motion_JsonParsing(uID, dID, ServerName, Service).contains("L_News_0001"));
+		Assert.assertTrue(util.Motion_JsonParsing(uID, dID, ServerName, Service, 발화).contains("L_News_0001"));
 		
 	}
 	
@@ -162,8 +163,8 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		test.log(Status.INFO, "'TTS 및 모션 확인");
 		String tts_message = util.getText(By.id("message"));
 		Assert.assertTrue(tts_message.contains("오늘 운세를 알려줄게"));
-		Assert.assertTrue(util.Motion_JsonParsing(uID, dID, ServerName, Service).contains("L_Fortune_0001"));
-		Assert.assertTrue(util.TemplateType_JsonParsing(uID, dID, ServerName, Service).contains("CenterCard"));
+		Assert.assertTrue(util.Motion_JsonParsing(uID, dID, ServerName, Service, "90년 1월 1일생 운세알려줘").contains("L_Fortune_0001"));
+		Assert.assertTrue(util.TemplateType_JsonParsing(uID, dID, ServerName, Service, "90년 1월 1일생 운세알려줘").contains("CenterCard"));
 		
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text,'1990년 1월 1일생 운세')]")));
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text,'재물운')]")));
@@ -184,13 +185,14 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-21892");
 		
 		test.log(Status.INFO, "'띠운세' 발화 랜덤 명령어 전송");
-		util.A_sendPost(util.ramdomCommand(Data.띠운세발화), uID, dID, ServerName);
+		String 발화 = util.ramdomCommand(Data.띠운세발화);
+		util.A_sendPost(발화, uID, dID, ServerName);
 		
 		test.log(Status.INFO, "'TTS 및 모션 확인");
 		String tts_message = util.getText(By.id("message"));
 		Assert.assertTrue(tts_message.contains("운세를 알려줄게"));
-		Assert.assertTrue(util.Motion_JsonParsing(uID, dID, ServerName, Service).contains("L_Fortune_0001"));
-		Assert.assertTrue(util.TemplateType_JsonParsing(uID, dID, ServerName, Service).contains("CenterCard"));
+		Assert.assertTrue(util.Motion_JsonParsing(uID, dID, ServerName, Service, 발화).contains("L_Fortune_0001"));
+		Assert.assertTrue(util.TemplateType_JsonParsing(uID, dID, ServerName, Service, 발화).contains("CenterCard"));
 		
 		
 	}
@@ -205,14 +207,15 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-18262");
 
 		test.log(Status.INFO, "'날씨' 발화 랜덤 명령어 전송");
-		util.A_sendPost(util.ramdomCommand(Data.날씨발화), uID, dID, ServerName);
+		String 발화 = util.ramdomCommand(Data.날씨발화);
+		util.A_sendPost(발화, uID, dID, ServerName);
 		
 		test.log(Status.INFO, "'TTS 및 모션 확인");
 		String tts_message = util.getText(By.id("message"));
 		Assert.assertTrue(tts_message.contains("날씨"));
 		
-		Assert.assertTrue(util.dataCheck_Contains(util.Motion_JsonParsing(uID, dID, ServerName, Service), Data.날씨모션코드_set));
-		Assert.assertTrue(util.TemplateType_JsonParsing(uID, dID, ServerName, Service).contains("TopRollingBanner"));
+		Assert.assertTrue(util.dataCheck_Contains(util.Motion_JsonParsing(uID, dID, ServerName, Service, 발화), Data.날씨모션코드_set));
+		Assert.assertTrue(util.TemplateType_JsonParsing(uID, dID, ServerName, Service, 발화).contains("TopRollingBanner"));
 
 		
 	}
@@ -227,10 +230,11 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-19424");
 
 		test.log(Status.INFO, "'티맵' 발화 랜덤 명령어 전송");
-		util.A_sendPost(util.ramdomCommand(Data.티맵발화), uID, dID, ServerName);
+		String 발화 = util.ramdomCommand(Data.티맵발화);
+		util.A_sendPost(발화, uID, dID, ServerName);
 		
 		test.log(Status.INFO, "'TTS 확인");
-		Assert.assertTrue(util.dataCheck_Contains(util.TTS_JsonParsing(uID, dID, ServerName, Service), Data.티맵TTS_set));
+		Assert.assertTrue(util.dataCheck_Contains(util.TTS_JsonParsing_retry(uID, dID, ServerName, Service, 발화), Data.티맵TTS_set));
 		
 		test.log(Status.INFO, "'웹뷰 전환");
 		util.switchContext("WEBVIEW");
@@ -266,11 +270,21 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		util.A_sendPost("끝말잇기 키보드로 시작", uID, dID, ServerName);
 		
 		test.log(Status.INFO, "'TTS 및 모션 확인");
-		String TTS = util.TTS_JsonParsing(uID, dID, ServerName, Service);
+		String TTS = util.TTS_JsonParsing_retry(uID, dID, ServerName, Service, "끝말잇기 키보드로 시작");
 		Assert.assertTrue(TTS.contains("좋아. 끝말잇기를 해보자. 시작 단어는"));
 		Assert.assertTrue(TTS.contains("할게. 이어지는 세 글자 단어로 입력해줄래?"));
-		Assert.assertTrue(util.Motion_JsonParsing(uID, dID, ServerName, Service).contains("Accepted_0001"));
-		util.Android_BackKey();
+		if((util.isElementPresent(By.id("home_text_input")))) {
+			util.Android_BackKey();
+		}
+		Assert.assertTrue(util.Motion_JsonParsing(uID, dID, ServerName, Service, "끝말잇기 키보드로 시작").contains("Accepted_0001"));
+		for(int i=0; i<3; i++) {
+			Thread.sleep(1000);
+			if((util.isElementPresent(By.id("home_text_input")))) {
+				util.Android_BackKey();
+			}
+		}
+		
+		
 	}
 	
 	@Test(description = "A. Hotfix Regression Test : 014-004-001 apollo_message_sendmessage_001 수신자 / 메시지 없음")
@@ -519,9 +533,6 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 
 		
 	}
-	
-	
-	
-	
+
 
 }

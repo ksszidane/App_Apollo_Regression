@@ -17,10 +17,13 @@
         <methods>
           <include name="TC_008_001_002" invocation-numbers="0"/>
           <include name="tearDownClass"/>
+          <include name="TC_015_005_001" invocation-numbers="0"/>
           <include name="setupClass"/>
           <include name="BeforeMethod"/>
-          <include name="TC_007_003_001" invocation-numbers="0"/>
+          <include name="TC_014_008_001" invocation-numbers="0"/>
+          <include name="TC_014_004_001" invocation-numbers="0"/>
           <include name="AfterMethod"/>
+          <include name="TC_015_004_001" invocation-numbers="0"/>
         </methods>
       </class> <!-- Apollo_001_공통.Apollo_03_공통 -->
     </classes>
