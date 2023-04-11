@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="10" parallel="tests" name="Failed suite [ExtentReport]" guice-stage="DEVELOPMENT">
+<suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [ExtentReport]" parallel="tests">
   <parameter name="Project" value="Apollo"/>
   <parameter name="hubAddress" value="http://0.0.0.0:4723/wd/hub"/>
-  <test thread-count="10" parallel="tests" name="Test_Project(failed)">
+  <test thread-count="10" name="Test_Project(failed)" parallel="tests">
     <parameter name="MobileDevice" value="R33M4000CY"/>
     <parameter name="OS" value="Android"/>
     <parameter name="Server" value="STG"/>
@@ -18,7 +18,6 @@
           <include name="TC_008_001_002" invocation-numbers="0"/>
           <include name="tearDownClass"/>
           <include name="setupClass"/>
-          <include name="TC_010_003_001" invocation-numbers="0"/>
           <include name="BeforeMethod"/>
           <include name="TC_007_003_001" invocation-numbers="0"/>
           <include name="AfterMethod"/>
