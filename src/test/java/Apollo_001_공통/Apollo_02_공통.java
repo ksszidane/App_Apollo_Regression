@@ -457,6 +457,9 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		test.log(Status.INFO, "TV 내역 메뉴 노출 확인");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, 'TV')]")));
 		
+		test.log(Status.INFO, "프로야구 내역 메뉴 노출 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '프로야구')]")));	
+		
 		test.log(Status.INFO, "게임 내역 메뉴 노출 확인");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '게임')]")));
 		

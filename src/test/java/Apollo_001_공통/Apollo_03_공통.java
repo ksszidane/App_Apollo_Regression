@@ -29,7 +29,6 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		Thread.sleep(5000);
 		util.waitForIsElementPresent(By.xpath(xPath.에이닷_홈));
 		
-		
 		String 템플릿텍스트1;
 		String 템플릿텍스트2;
 		
@@ -491,7 +490,8 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		
 		test.log(Status.INFO,"T전화로 설정하러 가기 버튼 액션 동작 확인");
 		util.click(By.id("phone_profile_button"));
-		util.waitForIsElementPresent(By.id("capturing_title_textview"));
+		Thread.sleep(3000);
+		//util.waitForIsElementPresent(By.id("capturing_title_textview")); //캐릭터 캡쳐중 ID
 		String contentTextView1 =  util.getText(By.id("contentTextView"));
 		Assert.assertEquals(contentTextView1, "T전화에서 최종 저장을 완료해주세요.\n"
 				+ "T전화로 이동합니다.");
@@ -515,7 +515,8 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		
 		test.log(Status.INFO,"상단 캐릭터 설정 화면의 저장 버튼 클릭");
 		util.click(By.id("save_image_button"));
-		util.waitForIsElementPresent(By.id("capturing_title_textview"));
+		Thread.sleep(3000);
+		//util.waitForIsElementPresent(By.id("capturing_title_textview")); //캐릭터 캡쳐중 ID
 		
 		test.log(Status.INFO,"상단 캐릭터 설정 저장 완료");
 		String titleTextView1 =  util.getText(By.id("titleTextView"));

@@ -18,6 +18,9 @@
 		<!--
 		R3CMA0GBTQ              >   s20
 		R33M4000CY
+		  
+		APL00000CAP8UMKRSNB4APL00000CAP8UMNEOSG0    //adot6qa@adot.com
+		APL00000BTEPAZ4LHSLCAPL00000BTEPAZ6TEJNK    //ksszidane@naver.com
 		-->
 		
 		<classes>
@@ -25,9 +28,10 @@
 			<class name="Apollo_001_공통.Apollo_01_Permission" />
 			<class name="Apollo_001_공통.Apollo_02_공통" />
 			<class name="Apollo_001_공통.Apollo_03_공통" />
+			<class name="Apollo_001_공통.Apollo_04_공통" />
 			-->
 	
-			<class name="Apollo_001_공통.Apollo_03_공통" />
+			<class name="Apollo_001_공통.Apollo_04_공통" />
 
 
 			

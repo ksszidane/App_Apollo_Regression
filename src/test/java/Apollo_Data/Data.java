@@ -22,7 +22,15 @@ public class Data {
 	
 	public static String 서수문자발화 [] = {"1번","두번째에게 보내","첫번째한테 메세지 보내", "첫번째 김성수에게 보내"};
 	
+	public static String 알람발화 [] = {"알람 맞춰줘","알람 설정해줘","알람 등록해줘", "모니콜 해줘", "2020년 2월 3일에 알람해"};
+	
+	public static String 할일 [] = {"할일 화면으로 가줘","할일 화면 보여줘","투두 메뉴 ", "할일목록 가줘", "할일리스트 가줘", "할일목록으로", "할일화면으로", "할일화면으로 이동"};
+	
 	public static String 전화 [] = {"전화","통화연결","전화 걸기", "전화 연결"};
+	
+	public static String FLO [] = {"플로 음악 틀어줘","FLO에서 음원 찾아줘","FLO 음원 들려줘"};
+	
+	public static String ASMR [] = {"ASMR 플레이", "자연의 소리 플레이", "힐링 사운드 플레이", "ASMR 셔플"};
 	
 	public static String 음악시작 [] = {"음악", "FLO"};
 	public List<String> 음악시작_list = Arrays.asList(음악시작);  
@@ -39,6 +47,5 @@ public class Data {
 	public static String 티맵TTS [] = {"다음 중 목적지를 선택해 줘","다음 중 목적지를 선택해 주세요"};
 	public List<String> 티맵TTS_list = Arrays.asList(티맵TTS);  
 	public static Set<String> 티맵TTS_set = new HashSet<String>(Arrays.asList(티맵TTS));
-
 
 }
