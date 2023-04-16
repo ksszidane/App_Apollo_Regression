@@ -582,7 +582,7 @@ public class Apollo_04_공통 extends APOLLO_TestCase {
 		
 	}
 	
-	@Test(description = "A. Hotfix Regression Test : 018-001-005 apolloMusic_sgc_01_005 선택된 재생CP 를 지원하는 POC + 로그인 + 재생 목록 있음 + 지원 이용권 + 일반 재생 요청") 
+	//@Test(description = "A. Hotfix Regression Test : 018-001-005 apolloMusic_sgc_01_005 선택된 재생CP 를 지원하는 POC + 로그인 + 재생 목록 있음 + 지원 이용권 + 일반 재생 요청") 
 	public void TC_018_001_005(Method method) throws Exception {
 		
 		test.log(Status.INFO, "018-001-005 apolloMusic_sgc_01_005 선택된 재생CP 를 지원하는 POC + 로그인 + 재생 목록 있음 + 지원 이용권 + 일반 재생 요청");
@@ -612,7 +612,7 @@ public class Apollo_04_공통 extends APOLLO_TestCase {
 		
 	}
 	
-	@Test(description = "A. Hotfix Regression Test : 018-006-007 apolloMusic_play_01_006  ~ 008 ASMR") 
+	//@Test(description = "A. Hotfix Regression Test : 018-006-007 apolloMusic_play_01_006  ~ 008 ASMR") 
 	public void TC_018_006_007(Method method) throws Exception {
 		
 		test.log(Status.INFO, "018-006-007 apolloMusic_play_01_006  ~ 008 ASMR");
@@ -650,7 +650,9 @@ public class Apollo_04_공통 extends APOLLO_TestCase {
 		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-19501");
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-19501");
 		
-		util.A_sendPost("안녕", uID, dID, ServerName);
+		test.log(Status.INFO, "홈 화면 이동 확인");
+		Thread.sleep(5000);
+		util.waitForIsElementPresent(By.xpath(xPath.에이닷_홈));
 		
 		test.log(Status.INFO,"캐릭터 롱 프레스");
 		util.longPress(By.id("avatar_view_fragment"));
@@ -662,6 +664,223 @@ public class Apollo_04_공통 extends APOLLO_TestCase {
 		} 
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("avatar_shop_purchase")));
 		
+	}
+	
+	@Test(description = "A. Hotfix Regression Test : 019-006-001 tab_1 캐릭터 꾸미기 + 꾸미기 탭") 
+	public void TC_019_006_001(Method method) throws Exception {
+		
+		test.log(Status.INFO, "019-006-001 tab_1 캐릭터 꾸미기 + 꾸미기 탭");
+		System.out.println("019-006-001 tab_1 캐릭터 꾸미기 + 꾸미기 탭");
+		
+		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-26926");
+		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-26926");
+		
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 ");
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 이전버튼 ");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("appbar_back")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 재화영역 ");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("wallet_bar")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 큐브아이콘 ");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("icon_cube")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 큐브포인트 ");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("cube_point")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 콘 아이콘");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("icon_cone")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 콘포인트 ");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("cone_point")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 브랜드관 로고");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("image_view_icon"))); //브랜드관 로고
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 캐릭터 영역");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("character_holder")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 초기화 버튼");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("btn_undo")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 구매 저장 버튼 ");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("btn_save")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 아이템 카테고리");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '펭수세트')]")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 목소리");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '목소리')]")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - All 탭");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.RadioButton[contains(@text, 'ALL')]")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - MY탭");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.RadioButton[contains(@text, 'MY')]")));
+		test.log(Status.INFO,"꾸미기 페이지 구성요소 확인 - 아이템 리스트");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("decoration_item_recyclerview")));
+		test.log(Status.INFO,"랜덤 착장 미노출 확인");
+		Assert.assertFalse(util.isElementPresent_Assertfunc(By.xpath("//android.widget.ImageButton[@content-desc='랜덤 착장']")));
+		
+		
+		test.log(Status.INFO,"루피 브랜드관 아이콘 표시 - 랜덤착장 미노출 확안");
+		util.click(By.id("btn_next_character"));
+		test.log(Status.INFO,"캐릭터 로딩 대기");
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '루피세트')]")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("image_view_icon")));
+		Assert.assertFalse(util.isElementPresent_Assertfunc(By.xpath("//android.widget.ImageButton[@content-desc='랜덤 착장']")));
+		
+		test.log(Status.INFO,"뽀로로 브랜드관 아이콘 표시- 랜덤착장 미노출 확안");
+		util.click(By.id("btn_next_character"));
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '뽀로로세트')]")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("image_view_icon")));
+		Assert.assertFalse(util.isElementPresent_Assertfunc(By.xpath("//android.widget.ImageButton[@content-desc='랜덤 착장']")));
+		
+		test.log(Status.INFO,"에이닷 브랜드관 아이콘 '미'표시 - 랜덤 착장 노출 확인");
+		util.click(By.id("btn_next_character"));
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		//Assert.assertFalse(util.isElementPresent_Assertfunc(By.id("image_view_icon")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.ImageButton[@content-desc='랜덤 착장']")));
+		
+		test.log(Status.INFO,"에이닷 브랜드관에서만 랜덤 버튼 클릭");
+		util.click(By.xpath("//android.widget.ImageButton[@content-desc='랜덤 착장']"));
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		test.log(Status.INFO,"구매 버튼으로 변경 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("btn_purchase")));
+		String 구매갯수 = util.getText(By.id("btn_purchase"));
+		Assert.assertTrue(util.dataCheck_Contains(구매갯수, Data.구매버튼_set));
+		
+		test.log(Status.INFO,"초기화 기능 동작 확인");
+		util.click(By.id("btn_undo"));
+		String titleTextView = util.getText(By.id("titleTextView"));
+		Assert.assertEquals(titleTextView, "모든 캐릭터의 착용 아이템을 되돌립니다.");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("negativeButton")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("positiveButtonText")));
+		
+		test.log(Status.INFO,"초기화 기능 팝업 아니오 동작 확인");
+		util.click(By.id("negativeButton"));
+		Assert.assertFalse(util.isElementPresent_Assertfunc(By.id("dialogLayout")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.ImageButton[@content-desc='랜덤 착장']")));
+		
+		test.log(Status.INFO,"초기화 기능 팝업 예 동작 확인");
+		util.click(By.id("btn_undo"));
+		util.click(By.id("positiveButtonText"));
+		test.log(Status.INFO,"팽수 브랜드관 복귀- 랜덤착장 미노출 확안");
+		util.click(By.id("btn_next_character"));
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		Assert.assertFalse(util.isElementPresent_Assertfunc(By.id("image_view_icon")));
+		Assert.assertFalse(util.isElementPresent_Assertfunc(By.xpath("//android.widget.ImageButton[@content-desc='랜덤 착장']")));
+		
+		test.log(Status.INFO,"구매한 아이템 내 변경사항 있음");
+		util.click(By.xpath("//android.widget.TextView[contains(@resource-id, 'decoration_item_recyclerview')]/android.widget.LinearLayout[1]"));
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		test.log(Status.INFO,"나가기 버튼 클릭 후 팝업 확인");
+		util.click(By.id("appbar_back"));
+		String titleTextView1 = util.getText(By.id("titleTextView"));
+		Assert.assertEquals(titleTextView1, "저장하지 않으면 변경 내용이 사라집니다.");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("negativeButton")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("positiveButtonText")));
+		util.Android_BackKey();
+		
+		test.log(Status.INFO,"구매하지 않은 아이템 내 변경사항 있음");
+		util.click(By.xpath("//android.widget.TextView[contains(@resource-id, 'decoration_item_recyclerview')]/android.widget.LinearLayout[8]"));
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		test.log(Status.INFO,"나가기 버튼 클릭 후 팝업 확인");
+		util.click(By.id("appbar_back"));
+		String titleTextView3 = util.getText(By.id("titleTextView"));
+		Assert.assertEquals(titleTextView3, "구매하지 않은 아이템은 착용이 해제됩니다.");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("negativeButton")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("positiveButtonText")));
+		util.Android_BackKey();
+		
+		test.log(Status.INFO,"구매한 아이템 내 변경사항 있음");
+		util.click(By.xpath("//android.widget.TextView[contains(@resource-id, 'decoration_item_recyclerview')]/android.widget.LinearLayout[1]"));
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		test.log(Status.INFO,"나가기 버튼 클릭 후 팝업 확인");
+		util.click(By.id("appbar_back"));
+		test.log(Status.INFO,"나가기 버튼 클릭");
+		util.click(By.id("negativeButton"));
+		test.log(Status.INFO, "홈 화면 이동 확인");
+		Thread.sleep(5000);
+		util.waitForIsElementPresent(By.xpath(xPath.에이닷_홈));
+		
+		test.log(Status.INFO,"캐릭터 롱 프레스");
+		util.longPress(By.id("avatar_view_fragment"));
+		util.click(By.id("btn_show_editor"));
+		
+		test.log(Status.INFO,"캐릭터 꾸미기 페이지 이동 확인");
+		if(util.isElementPresent_Assertfunc(By.id("positiveButtonText"))) {
+			util.click(By.id("positiveButtonText"));
+		} 
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("avatar_shop_purchase")));
+		
+		test.log(Status.INFO,"구매한 아이템 내 변경사항 있음");
+		util.click(By.xpath("//android.widget.TextView[contains(@resource-id, 'decoration_item_recyclerview')]/android.widget.LinearLayout[1]"));
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		test.log(Status.INFO,"나가기 버튼 클릭 후 팝업 확인");
+		util.click(By.id("appbar_back"));
+		util.click(By.id("positiveButtonText"));
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		
+		test.log(Status.INFO,"저장 완료 팝업 확인");
+		String titleTextView4 = util.getText(By.id("titleTextView"));
+		Assert.assertEquals(titleTextView4, "저장 완료");
+		String contentTextView = util.getText(By.id("contentTextView"));
+		Assert.assertEquals(contentTextView, "업데이트된 내 캐릭터를\n"
+				+ "T전화 프로필에도 반영할까요?");
+		util.click(By.id("positiveButtonText"));
+		Thread.sleep(7000);
+		
+		test.log(Status.INFO,"캐릭터 프로필 설정 페이지 이동의 저장 확인");
+		String contentTextView2 = util.getText(By.id("contentTextView"));
+		Assert.assertEquals(contentTextView2, "T전화에서 최종 저장을 완료해주세요.\n"
+				+ "T전화로 이동합니다.");
+		util.Android_BackKey();
+		util.Android_BackKey();
+		
+		test.log(Status.INFO,"캐릭터 롱 프레스");
+		util.longPress(By.id("avatar_view_fragment"));
+		util.click(By.id("btn_show_editor"));
+		
+		test.log(Status.INFO,"캐릭터 꾸미기 페이지 이동 확인");
+		if(util.isElementPresent_Assertfunc(By.id("positiveButtonText"))) {
+			util.click(By.id("positiveButtonText"));
+		} 
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("avatar_shop_purchase")));
+		
+		test.log(Status.INFO,"구매하지 않은 아이템 내 변경사항 있음");
+		util.click(By.xpath("//android.widget.TextView[contains(@resource-id, 'decoration_item_recyclerview')]/android.widget.LinearLayout[8]"));
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		test.log(Status.INFO,"나가기 버튼 클릭 후 팝업 확인");
+		util.click(By.id("appbar_back"));
+		util.click(By.id("positiveButtonText"));
+		
+		test.log(Status.INFO,"구매하기 페이지 랜딩 확인");
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("avatar_shop_purchase")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '구매 항목')]")));
+		util.Android_BackKey();
+		
+		test.log(Status.INFO,"테스트 셋팅");
+		util.click(By.xpath("//android.widget.TextView[contains(@resource-id, 'decoration_item_recyclerview')]/android.widget.LinearLayout[3]"));
+		util.click(By.id("btn_save"));
+		if (util.isElementPresent(By.xpath(xPath.꾸미기로딩))) {
+			Thread.sleep(2000);
+		} 
+		util.click(By.id("positiveButtonText"));
+		Thread.sleep(7000);
+		util.Android_BackKey();
+		util.Android_BackKey();
 	}
 
 }

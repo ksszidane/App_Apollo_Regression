@@ -47,5 +47,9 @@ public class Data {
 	public static String 티맵TTS [] = {"다음 중 목적지를 선택해 줘","다음 중 목적지를 선택해 주세요"};
 	public List<String> 티맵TTS_list = Arrays.asList(티맵TTS);  
 	public static Set<String> 티맵TTS_set = new HashSet<String>(Arrays.asList(티맵TTS));
+	
+	public static String 구매버튼 [] = {"구매", "구매 1", "구매 2", "구매 3", "구매 4", "구매 5", "구매 6", "구매 7"};
+	public List<String> 구매버튼_list = Arrays.asList(구매버튼);  
+	public static Set<String> 구매버튼_set = new HashSet<String>(Arrays.asList(구매버튼));
 
 }
