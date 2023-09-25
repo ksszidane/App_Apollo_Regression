@@ -10,28 +10,30 @@
 		<parameter name="Server" value="STG" /> <!-- 서버값 대문자로  : PRD, STG -->
 		<parameter name="TestPlace" value="in" /> <!-- 사내 : in  // 사외 : out-->
 		<parameter name="ServiceName" value="adot" /> <!--  nugu / adot-->
-		<parameter name="deviceID" value="APL00000CAP8UMNEOSG0"/>
-		<parameter name="userID" value="APL00000CAP8UMKRSNB4"/>
-		<parameter name="MobileDevice" value="R33M4000CY"/>
+		<parameter name="deviceID" value="APL00000CIAF2XMHJCOW"/>
+		<parameter name="userID" value="APL00000CIAF2XOUFWG0"/>
+		<parameter name="MobileDevice" value="192.168.1.12:5555"/>
 
 		
 		<!--
 		R3CMA0GBTQ              >   s20
 		R33M4000CY
+		192.168.1.12:5555
 		  
-		APL00000CAP8UMKRSNB4APL00000CAP8UMNEOSG0    //adot6qa@adot.com
+		APL00000CAP8UMKRSNB4APL00000CAP8UMNEOSG0    //adotqa6@adot.com
 		APL00000BTEPAZ4LHSLCAPL00000BTEPAZ6TEJNK    //ksszidane@naver.com
+		APL00000CIAF2XMHJCOWAPL00000CIAF2XOUFWG0    //adotqa60@adot.com
 		-->
 		
 		<classes>
 			<!--
-			<class name="Apollo_001_공통.Apollo_01_Permission" />
-			<class name="Apollo_001_공통.Apollo_02_공통" />
-			<class name="Apollo_001_공통.Apollo_03_공통" />
-			<class name="Apollo_001_공통.Apollo_04_공통" />
+	
 			-->
 	
-			<class name="Apollo_001_공통.Apollo_04_공통" />
+
+			<class name="Apollo_ChatRoom.ChatRoom_001" />
+
+	
 
 
 			

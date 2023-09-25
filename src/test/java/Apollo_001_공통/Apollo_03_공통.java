@@ -86,6 +86,9 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		템플릿텍스트2 = util.getText(By.id("text2"));
 		Assert.assertEquals(템플릿텍스트2, "= 9.4247779608");
 		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
+		
 
 	}
 	
@@ -118,6 +121,9 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		test.log(Status.INFO, "'뉴스 종료' 발화 명령어 전송");
 		util.A_sendPost("뉴스 종료", uID, dID, ServerName);
 		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
+		
 	}
 	
 
@@ -145,6 +151,8 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		util.A_sendPost("뉴스 종료", uID, dID, ServerName);
 		Assert.assertTrue(util.Motion_JsonParsing(uID, dID, ServerName, Service, 발화).contains("L_News_0001"));
 		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
 	}
 	
 	@Test(description = "A. Hotfix Regression Test : 008-001-002 fortune_dux_002 Template + CardTableScrollable")
@@ -172,6 +180,9 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("key")));
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("value")));
 		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
+		
 	}
 	
 	@Test(description = "A. Hotfix Regression Test : 008-004-001 fortune_zodiac_001 띠 운세 + 날짜 지정 + 띠 이름 O")
@@ -192,6 +203,9 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		Assert.assertTrue(tts_message.contains("운세를 알려줄게"));
 		Assert.assertTrue(util.Motion_JsonParsing(uID, dID, ServerName, Service, 발화).contains("L_Fortune_0001"));
 		Assert.assertTrue(util.TemplateType_JsonParsing(uID, dID, ServerName, Service, 발화).contains("CenterCard"));
+		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
 		
 		
 	}
@@ -215,6 +229,9 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		
 		Assert.assertTrue(util.dataCheck_Contains(util.Motion_JsonParsing(uID, dID, ServerName, Service, 발화), Data.날씨모션코드_set));
 		Assert.assertTrue(util.TemplateType_JsonParsing(uID, dID, ServerName, Service, 발화).contains("TopRollingBanner"));
+		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
 
 		
 	}
@@ -227,6 +244,10 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		
 		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-19424");
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-19424");
+		
+		test.log(Status.INFO, "홈 화면 이동 확인");
+		Thread.sleep(5000);
+		util.waitForIsElementPresent(By.xpath(xPath.에이닷_홈));
 
 		test.log(Status.INFO, "'티맵' 발화 랜덤 명령어 전송");
 		String 발화 = util.ramdomCommand(Data.티맵발화);
@@ -236,7 +257,8 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		Assert.assertTrue(util.dataCheck_Contains(util.TTS_JsonParsing_retry(uID, dID, ServerName, Service, 발화), Data.티맵TTS_set));
 		
 		test.log(Status.INFO, "'웹뷰 전환");
-		util.switchContext("WEBVIEW");
+		util.switchContextURL("WEBVIEW_com.skt.nugu.apollo.stg", xPath.Tmap_Webview_STG_URL);
+		//util.switchContext("WEBVIEW");
 
 		test.log(Status.INFO, "'최근목적지 타이틀 확인");
 		Assert.assertTrue(util.getText_Assertfunc(By.xpath(xPath.Tmap최근목적지Text_web), "최근 목적지"));
@@ -252,7 +274,9 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		
 		test.log(Status.INFO, "웹뷰 닫기");
 		util.click(By.id("toolbar_button_close"));
-
+		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
 		
 	}
 	
@@ -290,7 +314,8 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 			}
 		}
 		
-		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
 		
 	}
 	
@@ -311,13 +336,16 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		Assert.assertTrue(tts_message.contains("누구에게 메시지를 보낼까?"));
 		
 		test.log(Status.INFO, "'아이유' 발화 랜덤 명령어 전송");
-		util.A_sendPost("아이유", uID, dID, ServerName);
+		util.A_sendPost("아이유", uID, dID, ServerName);   //연락처에 아이유 저장되어 있어야 함. 
 		
 		test.log(Status.INFO,"문자 내용 TTS 로그 조회");
 		String tts1_message = util.getText(By.id("message"));
 		Assert.assertTrue(tts1_message.contains("아이유에게 뭐라고 보낼까?"));
 		util.click(By.id("refresh"));
 		Thread.sleep(2000);
+		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
 
 		
 	}
@@ -339,7 +367,7 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		Assert.assertTrue(tts_message.contains("누구에게 메시지를 보낼까?"));
 		
 		test.log(Status.INFO, "'김성수' 발화 명령어 전송");
-		util.A_sendPost("김성수", uID, dID, ServerName);
+		util.A_sendPost("김성수", uID, dID, ServerName);    //연락처에 김성수 2명 이상
 		
 		test.log(Status.INFO, "화면 템플릿 확인");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("name")));
@@ -351,18 +379,20 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		Assert.assertTrue(tts1_message.contains("몇번째에게 메세지를 보낼까?"));
 		
 		test.log(Status.INFO, "'문서' 서수 발화 랜덤 명령어 전송");
-		util.A_sendPost(util.ramdomCommand(Data.서수문자발화), uID, dID, ServerName);
+		util.A_sendPost(util.ramdomCommand(Data.서수문자발화), uID, dID, ServerName);  
 		
 		test.log(Status.INFO,"서수 문자 내용 TTS 로그 조회");
 		String tts2_message = util.getText(By.id("message"));
 		Assert.assertTrue(tts2_message.contains("에게 뭐라고 보낼까?"));
 		
 		test.log(Status.INFO, "화면 템플릿 확인");
-		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text,'휴대폰 | 010-3245-0613')]")));
+		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text,'휴대폰 | 010-1111-1111')]")));
 		
 		util.click(By.id("refresh"));
 		Thread.sleep(2000);
-
+		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
 			
 	}
 	
@@ -383,6 +413,9 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		Assert.assertTrue(tts_message.contains("누구에게 전화를 걸까?"));
 		util.click(By.id("refresh"));
 		Thread.sleep(2000);
+		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
 		
 
 	}
@@ -405,6 +438,9 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 
 		util.click(By.id("refresh"));
 		Thread.sleep(2000);
+		
+		test.log(Status.INFO, "1 TestCase ");
+		test.log(Status.INFO, "1 TestCase ");
 
 	}
 	
@@ -498,13 +534,13 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		util.click(By.id("positiveButtonText"));
 		
 		test.log(Status.INFO,"T전화 이동 페이지 확인");
-		Assert.assertTrue(util.waitForActivity(".activities.setting.tservice.profile.ProfileSettingActivity"));
+		Assert.assertTrue(util.waitForActivity("myprofile.ProfileSettingActivity"));
 		util.Android_BackKey();
 		util.click(By.xpath("//android.widget.TextView[contains(@resource-id, 'com.skt.prod.dialer:id/btnPositive')]"));
 		util.Android_BackKey();
 		util.Android_BackKey();
 		util.Android_BackKey();
-		
+	
 		
 		test.log(Status.INFO,"에이닷 홈 이동 확인");
 		util.waitForIsElementPresent(By.xpath(xPath.에이닷_홈));
@@ -533,14 +569,15 @@ public class Apollo_03_공통 extends APOLLO_TestCase {
 		util.click(By.id("positiveButtonText"));
 		
 		test.log(Status.INFO,"T전화 이동 페이지 확인");
-		Assert.assertTrue(util.waitForActivity(".activities.setting.tservice.profile.ProfileSettingActivity"));
+		Assert.assertTrue(util.waitForActivity("myprofile.ProfileSettingActivity"));
 		util.Android_BackKey();
 		util.click(By.xpath("//android.widget.TextView[contains(@resource-id, 'com.skt.prod.dialer:id/btnPositive')]"));
 		util.Android_BackKey();
 		util.Android_BackKey();
 		util.Android_BackKey();
 
-		
+		test.log(Status.INFO, "5 TestCase ");
+		test.log(Status.INFO, "5 TestCase ");
 	}
 
 

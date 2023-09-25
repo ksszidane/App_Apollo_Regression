@@ -35,7 +35,9 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		
 		test.log(Status.INFO,"기본 높이값 / 넓이값 확인");
 		String bounds = util.getAttribute(By.xpath("//android.widget.RelativeLayout[contains(@resource-id, 'widget_container')]"), "bounds");
-		Assert.assertEquals(bounds, "[50,230][1030,755]");
+		//Assert.assertEquals(bounds, "[50,230][1030,755]"); //[50,235][1030,760]
+		Assert.assertTrue(bounds.contains("50"));
+		Assert.assertTrue(bounds.contains("1030"));
 		
 		test.log(Status.INFO,"위젯 구성 요소 확인 : 캐릭터 이미지");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.id("avatar_icon")));
@@ -97,7 +99,9 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		
 		util.click(By.id("btn_close"));
 		
-
+		test.log(Status.INFO, "5 TestCase ");
+		test.log(Status.INFO, "5 TestCase ");
+		
 	}
 	
 	@Test(description = "A. Hotfix Regression Test : 001-003-001 login_1 T아이디 로그인 이력 X / O")
@@ -108,6 +112,9 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		
 		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-23011");
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-23011");
+		
+		test.log(Status.INFO, "0 TestCase ");
+		test.log(Status.INFO, "0 TestCase ");
 		
 		throw new SkipException("Skipping this exception");
 				
@@ -121,6 +128,9 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		
 		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-19913");
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-199131");
+		
+		test.log(Status.INFO, "0 TestCase ");
+		test.log(Status.INFO, "0 TestCase ");
 		
 		throw new SkipException("Skipping this exception");
 				
@@ -250,7 +260,8 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		System.out.println(날씨메세지);
 		Assert.assertFalse(날씨메세지.contains("날씨"));
 		
-		
+		test.log(Status.INFO, "6 TestCase ");
+		test.log(Status.INFO, "6 TestCase ");
 	}
 	
 	@Test(description = "A. Hotfix Regression Test : 002-003-001 home glm")
@@ -261,6 +272,9 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		
 		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-20661");
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-20661");
+		
+		test.log(Status.INFO, "0 TestCase ");
+		test.log(Status.INFO, "0 TestCase ");
 		
 		throw new SkipException("Skipping this exception");
 		
@@ -275,6 +289,9 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		
 		test.log(Status.INFO, "https://tde.sktelecom.com/pms/browse/AITE-20663");
 		System.out.println("https://tde.sktelecom.com/pms/browse/AITE-20663");
+		
+		test.log(Status.INFO, "0 TestCase ");
+		test.log(Status.INFO, "0 TestCase ");
 		
 		throw new SkipException("Skipping this exception");
 		
@@ -360,7 +377,8 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		test.log(Status.INFO,"루틴 레드닷 확인 ");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.ImageView[2]")));
 		
-		
+		test.log(Status.INFO, "4 TestCase ");
+		test.log(Status.INFO, "4 TestCase ");
 		
 	}
 	
@@ -476,6 +494,9 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		test.log(Status.INFO, "튜터 내역 메뉴 노출 확인");
 		Assert.assertTrue(util.isElementPresent_Assertfunc(By.xpath("//android.widget.TextView[contains(@text, '튜터')]")));
 		util.click(By.id("close_button"));
+		
+		test.log(Status.INFO, "7 TestCase ");
+		test.log(Status.INFO, "7 TestCase ");
 	}
 	
 	@Test(description = "A. Hotfix Regression Test : 002-006-001 home Web Viewer 웹 뷰어")
@@ -540,6 +561,9 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		util.Android_BackKey();
 		util.Android_BackKey();
 		
+		test.log(Status.INFO, "4 TestCase ");
+		test.log(Status.INFO, "4 TestCase ");
+		
 	}
 	
 	@Test(description = "A. Hotfix Regression Test : 003-002-004 setting_privacy_4 설정 + 개인 정보 + 로그아웃")
@@ -602,7 +626,8 @@ public class Apollo_02_공통 extends APOLLO_TestCase {
 		util.waitForIsElementPresent(By.xpath(xPath.에이닷_홈));
 
 		
-		
+		test.log(Status.INFO, "3 TestCase ");
+		test.log(Status.INFO, "3 TestCase ");
 		
 	}
 

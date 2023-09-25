@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [ExtentReport]" parallel="tests">
+<suite thread-count="10" parallel="tests" name="Failed suite [ExtentReport]" guice-stage="DEVELOPMENT">
   <parameter name="Project" value="Apollo"/>
   <parameter name="hubAddress" value="http://0.0.0.0:4723/wd/hub"/>
-  <test thread-count="10" name="Test_Project(failed)" parallel="tests">
-    <parameter name="MobileDevice" value="R33M4000CY"/>
+  <test thread-count="10" parallel="tests" name="Test_Project(failed)">
+    <parameter name="MobileDevice" value="192.168.1.12:5555"/>
     <parameter name="OS" value="Android"/>
     <parameter name="Server" value="STG"/>
     <parameter name="ServiceName" value="adot"/>
     <parameter name="TestPlace" value="in"/>
-    <parameter name="deviceID" value="APL00000CAP8UMNEOSG0"/>
-    <parameter name="userID" value="APL00000CAP8UMKRSNB4"/>
+    <parameter name="deviceID" value="APL00000CIAF2XMHJCOW"/>
+    <parameter name="userID" value="APL00000CIAF2XOUFWG0"/>
     <parameter name="AppName" value="APOLLO_STG"/>
     <classes>
-      <class name="Apollo_001_공통.Apollo_04_공통">
+      <class name="Apollo_ChatRoom.ChatRoom_001">
         <methods>
           <include name="tearDownClass"/>
           <include name="setupClass"/>
-          <include name="TC_019_006_001"/>
           <include name="BeforeMethod"/>
+          <include name="TC_000_001_031"/>
           <include name="AfterMethod"/>
-          <include name="TC_019_002_006"/>
         </methods>
-      </class> <!-- Apollo_001_공통.Apollo_04_공통 -->
+      </class> <!-- Apollo_ChatRoom.ChatRoom_001 -->
     </classes>
   </test> <!-- Test_Project(failed) -->
 </suite> <!-- Failed suite [ExtentReport] -->

@@ -27,6 +27,9 @@ public class Apollo_01_Permission extends APOLLO_TestCase {
 		util.waitForIsElementPresent(By.xpath(xPath.에이닷_홈));
 		util.closeApp();
 		
+		util.Android_APP_SWITCH();
+		util.click(By.xpath("//android.widget.Button[contains(@resource-id, 'clear_all_button')]"));
+		
 		test.log(Status.INFO, " '다른 앱 위에 표시 ' 권한 적용 후 앱 재실행");
 		if(ServerName.contains("STG")) {
 			adb.permission_draw_over_other_apps_Off(udid, "com.skt.nugu.apollo.stg");
